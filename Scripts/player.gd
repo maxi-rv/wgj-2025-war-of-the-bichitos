@@ -9,9 +9,9 @@ class_name Player
 
 var joystick_connected = false
 
-var move_speed : float = 750
+var move_speed : float = 500
 var character_direction : Vector2
-var friction: float = 1000
+var friction: float = 500
 
 func _physics_process(delta):
 	character_direction.x = Input.get_axis("move_left", "move_right")
@@ -27,7 +27,7 @@ func _physics_process(delta):
 
 func _on_area_2d_area_entered(area: Area2D):
 	var areaParent = area.get_parent()
-	if areaParent is Player:
+	if !(areaParent is Player):
 		pass
 
 func check_connected_joypad():

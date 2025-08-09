@@ -1,9 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://w72cl40rqmpp"]
+[gd_scene load_steps=4 format=3 uid="uid://w72cl40rqmpp"]
 
 [ext_resource type="PackedScene" uid="uid://k528gspw45so" path="res://Scenes/player.tscn" id="1_cm7ct"]
+[ext_resource type="Texture2D" uid="uid://g4s67vjk0xxq" path="res://Assets/sketches/Background02.png" id="1_fjk0y"]
+[ext_resource type="PackedScene" uid="uid://bw7puhn2jgirm" path="res://Scenes/bichito_01.tscn" id="3_qu4ft"]
 
 [node name="Maze_01" type="Node2D"]
+modulate = Color(0.0962047, 0.0962048, 0.0962047, 1)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_fjk0y")
+
+[node name="Bichito_01" parent="." instance=ExtResource("3_qu4ft")]
+position = Vector2(249, -119)
 
 [node name="Player" parent="." instance=ExtResource("1_cm7ct")]
+position = Vector2(-246, 131)
+
+[node name="Camera2D" type="Camera2D" parent="."]
