@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://w72cl40rqmpp"]
+
+[ext_resource type="PackedScene" uid="uid://k528gspw45so" path="res://Scenes/player.tscn" id="1_cm7ct"]
+
+[node name="Maze_01" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("1_cm7ct")]
