@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dqhm76ig305jf" path="res://Assets/Fondo/Laberinto.png" id="3_gmive"]
 
 [sub_resource type="Gradient" id="Gradient_cvnsp"]
-offsets = PackedFloat32Array(0, 0.0578512, 1)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.145062, 0.469136, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0.904158, 0.904158, 0.904158, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_lfhok"]
 gradient = SubResource("Gradient_cvnsp")
@@ -33,7 +33,7 @@ texture = ExtResource("2_kgxvy")
 
 [node name="Player" parent="." instance=ExtResource("3_7wrgn")]
 modulate = Color(0.393086, 0.393086, 0.393085, 1)
-position = Vector2(0, 1374)
+position = Vector2(0, 2431)
 
 [node name="Aura_PointLight2D2" type="PointLight2D" parent="Player"]
 scale = Vector2(3, 3)
@@ -46,14 +46,13 @@ texture_scale = 30.0
 position = Vector2(-130, 0)
 scale = Vector2(4, 4)
 limit_left = -4750
-limit_top = -2700
+limit_top = -2600
 limit_right = 4750
-limit_bottom = 2700
+limit_bottom = 2600
 limit_smoothed = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
 [node name="Laberinto" type="Sprite2D" parent="."]
+modulate = Color(0.470076, 0.470076, 0.470076, 1)
 texture = ExtResource("3_gmive")
 
 [node name="Walls" type="StaticBody2D" parent="."]
@@ -275,13 +274,13 @@ shape = SubResource("RectangleShape2D_y2vf1")
 debug_color = Color(0.583583, 0.0558292, 0.123015, 0.42)
 
 [node name="WorldLimit" type="StaticBody2D" parent="."]
-position = Vector2(0, 2699)
+position = Vector2(0, 2600)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLimit"]
 shape = SubResource("WorldBoundaryShape2D_y2vf1")
 
 [node name="WorldLimit2" type="StaticBody2D" parent="."]
-position = Vector2(0, -2687)
+position = Vector2(0, -2600)
 rotation = 3.14159
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLimit2"]

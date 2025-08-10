@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://brtrkai4x566i"]
+
+[ext_resource type="Script" uid="uid://bttolju65bfx2" path="res://Scripts/pick-upable.gd" id="1_52dy3"]
+[ext_resource type="Texture2D" uid="uid://bub7hahi8tdew" path="res://Assets/Objetos/Perlas/perla 5.png" id="2_mr0bt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_52dy3"]
+radius = 16.4924
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mr0bt"]
+radius = 128.561
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gwpym"]
+radius = 128.062
+
+[node name="Perla_05" type="StaticBody2D"]
+z_index = -1
+y_sort_enabled = true
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_52dy3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mr0bt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_52dy3")
+
+[node name="Area2D_Monitorable" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitorable"]
+shape = SubResource("CircleShape2D_mr0bt")
+
+[node name="Area2D_Monitoring" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitoring"]
+shape = SubResource("CircleShape2D_gwpym")
