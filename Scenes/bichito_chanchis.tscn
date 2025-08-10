@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://dog8wpu2jtqdd"]
+
+[ext_resource type="Script" uid="uid://cqhgm1dhy0bgk" path="res://Scripts/bichito_chanchis.gd" id="1_aitj7"]
+[ext_resource type="Texture2D" uid="uid://c41e7eelrm3ta" path="res://Assets/Personajes/Bichitos/chanchis 1.png" id="1_fxsfh"]
+[ext_resource type="Texture2D" uid="uid://bqgpaltbjcv3g" path="res://Assets/Personajes/Bichitos/chanchis 2.png" id="2_aitj7"]
+[ext_resource type="Texture2D" uid="uid://d1ijhmv6volvx" path="res://Assets/Personajes/Bichitos/chanchis 2.2.png" id="3_f6tav"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6bdjo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fxsfh")
+}],
+"loop": true,
+"name": &"front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aitj7")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f6tav")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5jor"]
+radius = 172.456
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v0hwf"]
+radius = 1400.14
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8qfbs"]
+radius = 141.739
+
+[node name="Bichito_Chanchis" type="CharacterBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_aitj7")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+avoidance_enabled = true
+radius = 125.0
+max_speed = 40000.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6bdjo")
+animation = &"front"
+autoplay = "front"
+
+[node name="Area2D_Monitorable" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitorable"]
+rotation = 1.5708
+shape = SubResource("CircleShape2D_v5jor")
+
+[node name="Area2D_Monitoring" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitoring"]
+rotation = 1.5708
+shape = SubResource("CircleShape2D_v0hwf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CircleShape2D_8qfbs")

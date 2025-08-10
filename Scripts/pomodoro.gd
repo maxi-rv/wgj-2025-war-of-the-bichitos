@@ -8,7 +8,7 @@ class_name Pomodoro
 @onready var area_2d_collision_shape_2d = $Area2D/CollisionShape2D
 
 var speaking: bool = false
-var dialoger_name = "Comodoro Pomodoro:"
+var dialoger_name = "Comodoro Pomodoro: "
 var dialog_01 = "¡Hola, Gumi Von Dum!"
 var dialog_02 = "Te seleccionamos para que vayas en una mision a un planeta desconocido..."
 var dialog_03 =  "¡Deberas recuperar un tesoro que es de suma necesidad para nosotros!"
@@ -21,4 +21,10 @@ func _ready():
 func _on_area_2d_area_entered(area):
 	var areaParent = area.get_parent()
 	if areaParent is Interacter:
-		pass
+		print(dialoger_name, dialog_01)
+		await get_tree().create_timer(3).timeout
+		print(dialoger_name, dialog_02)
+		await get_tree().create_timer(3).timeout
+		print(dialoger_name, dialog_03)
+		await get_tree().create_timer(3).timeout
+		print(dialoger_name, dialog_04) 

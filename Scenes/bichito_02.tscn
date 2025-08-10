@@ -58,6 +58,7 @@ region = Rect2(192, 0, 32, 37)
 radius = 137.277
 
 [node name="Bichito_02" type="CharacterBody2D"]
+y_sort_enabled = true
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_whlby")
 
