@@ -1,24 +1,67 @@
-[gd_scene load_steps=9 format=3 uid="uid://bw7puhn2jgirm"]
+[gd_scene load_steps=14 format=3 uid="uid://bw7puhn2jgirm"]
 
-[ext_resource type="Script" uid="uid://c703b0l1mfkic" path="res://Scripts/bichito.gd" id="1_2pl11"]
-[ext_resource type="Texture2D" uid="uid://d33sfmn6efjf2" path="res://Assets/sketches/bichito_01.png" id="2_qjh8p"]
+[ext_resource type="Script" uid="uid://c703b0l1mfkic" path="res://Scripts/bichito_01.gd" id="1_2pl11"]
+[ext_resource type="Texture2D" uid="uid://vw5n4hp3sg6t" path="res://Assets/Personajes/Bichitos/bicho 1 generico 1.png" id="2_rj1qw"]
+[ext_resource type="Texture2D" uid="uid://cka54r6vgddfv" path="res://Assets/Personajes/Bichitos/bicho 1 generico .png" id="3_oktjy"]
 [ext_resource type="Texture2D" uid="uid://dn07lhg3pi7tw" path="res://Assets/placeholders/dialog_kenneys_style7.png" id="3_qjh8p"]
 [ext_resource type="Texture2D" uid="uid://coelbs5on1qbw" path="res://Assets/placeholders/Dialog_Atlas/dialog_scared.tres" id="3_qlu3j"]
 [ext_resource type="Texture2D" uid="uid://csaphfy65nbdq" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_money.tres" id="4_5g6fa"]
+[ext_resource type="Texture2D" uid="uid://dnpkinhls8qic" path="res://Assets/Personajes/Bichitos/bicho 1 generico 1 izq.png" id="4_7vy6t"]
+[ext_resource type="Texture2D" uid="uid://dtrdr2ma18dtw" path="res://Assets/Personajes/Bichitos/bicho 1 generico izq.png" id="5_ie4v6"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lsbmb"]
-radius = 20.0
-height = 96.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_unfg8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rj1qw")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oktjy")
+}],
+"loop": true,
+"name": &"left_chasing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7vy6t")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ie4v6")
+}],
+"loop": true,
+"name": &"right_chasing",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rj1qw"]
+radius = 84.0
+height = 360.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bpw3"]
-radius = 249.58
+radius = 1400.14
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8hqr8"]
 atlas = ExtResource("3_qjh8p")
 region = Rect2(192, 0, 32, 37)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lsbmb"]
+radius = 20.0
+height = 96.0
+
 [node name="Bichito_01" type="CharacterBody2D"]
 y_sort_enabled = true
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_2pl11")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
@@ -27,15 +70,16 @@ avoidance_enabled = true
 radius = 125.0
 max_speed = 40000.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_qjh8p")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_unfg8")
+animation = &"left"
 
 [node name="Area2D_Monitorable" type="Area2D" parent="."]
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitorable"]
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_lsbmb")
+shape = SubResource("CapsuleShape2D_rj1qw")
 
 [node name="Area2D_Monitoring" type="Area2D" parent="."]
 monitorable = false
@@ -46,19 +90,19 @@ shape = SubResource("CircleShape2D_1bpw3")
 
 [node name="Dialog_Scared_Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(0, -90)
+position = Vector2(0, -225)
 scale = Vector2(2, 2)
 texture = ExtResource("3_qlu3j")
 
 [node name="Dialog_Sad_Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(0, -90)
+position = Vector2(0, -225)
 scale = Vector2(2, 2)
 texture = ExtResource("4_5g6fa")
 
 [node name="Dialog_Happy_Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(0, -90)
+position = Vector2(0, -225)
 scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_8hqr8")
 

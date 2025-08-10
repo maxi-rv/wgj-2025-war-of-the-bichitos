@@ -77,7 +77,7 @@ func handle_animations():
 	
 func _on_area_2d_area_entered(area: Area2D):
 	var areaParent = area.get_parent()
-	if areaParent is Bichito:
+	if areaParent is Bichito_01 || areaParent is Bichito_02:
 		get_tree().quit()
 
 func check_connected_joypad():
