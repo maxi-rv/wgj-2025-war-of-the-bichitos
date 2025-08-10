@@ -1,17 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://0rk0el4c2bg1"]
+[gd_scene load_steps=17 format=3 uid="uid://0rk0el4c2bg1"]
 
 [ext_resource type="Texture2D" uid="uid://pwf7s1jvvvj8" path="res://Assets/Fondo/fondo cute.png" id="1_2hnsd"]
 [ext_resource type="AudioStream" uid="uid://1s38o4jcgqlm" path="res://Sound/Bring It Together - Telecasted.mp3" id="2_v0qd2"]
 [ext_resource type="PackedScene" uid="uid://k528gspw45so" path="res://Scenes/player.tscn" id="3_v0qd2"]
-[ext_resource type="PackedScene" uid="uid://nimj1708iaep" path="res://Scenes/para_sito_01.tscn" id="4_btonh"]
+[ext_resource type="PackedScene" uid="uid://nimj1708iaep" path="res://Scenes/Pomodoro.tscn" id="5_mdeuq"]
+[ext_resource type="PackedScene" uid="uid://d3nuvxyyt0bsc" path="res://Scenes/Objetos Cute/Sin Colliders/chupetin_02.tscn" id="5_qr0vi"]
+[ext_resource type="PackedScene" uid="uid://b6pgkgn1qykbq" path="res://Scenes/Objetos Cute/Sin Colliders/flor_amarilla_clarita_01.tscn" id="6_wgrjc"]
+[ext_resource type="PackedScene" uid="uid://cjl143ugualqh" path="res://Scenes/Objetos Cute/Sin Colliders/flor_violeta_01.tscn" id="7_vlryo"]
+[ext_resource type="PackedScene" uid="uid://dv6xqeiwfhhlb" path="res://Scenes/Objetos Cute/Sin Colliders/frutilla_01.tscn" id="8_3o71o"]
+[ext_resource type="PackedScene" uid="uid://c2maqpp3u2wbn" path="res://Scenes/Objetos Cute/Sin Colliders/chupetin_01.tscn" id="9_vlryo"]
+[ext_resource type="PackedScene" uid="uid://bxldnvkyy5si1" path="res://Scenes/Objetos Cute/Sin Colliders/flor_amarilla_01.tscn" id="10_3o71o"]
+[ext_resource type="PackedScene" uid="uid://durlh6uom057q" path="res://Scenes/Objetos Cute/Sin Colliders/sandia_01.tscn" id="11_xx8c3"]
+[ext_resource type="PackedScene" uid="uid://dc8cdesjixvuv" path="res://Scenes/Objetos Cute/Sin Colliders/caramelo_01.tscn" id="12_7rb6d"]
+[ext_resource type="PackedScene" uid="uid://d2xijhro83qgr" path="res://Scenes/Objetos Cute/Sin Colliders/flor_amarilla_02.tscn" id="13_4vay5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qr0vi"]
+radius = 68.1175
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vlryo"]
+radius = 35.0
+height = 120.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0mbvg"]
+radius = 40.0
+height = 224.0
 
 [node name="Home_World" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="Background" type="Sprite2D" parent="."]
-z_index = -1
+z_index = -5
 texture = ExtResource("1_2hnsd")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -19,8 +37,111 @@ stream = ExtResource("2_v0qd2")
 autoplay = true
 bus = &"Music"
 
-[node name="Player" parent="." instance=ExtResource("3_v0qd2")]
-position = Vector2(0, 188)
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Para-sito_01" parent="." instance=ExtResource("4_btonh")]
-position = Vector2(-654, -240)
+[node name="Player" parent="." instance=ExtResource("3_v0qd2")]
+position = Vector2(-9, 432)
+
+[node name="Pomodoro" parent="." instance=ExtResource("5_mdeuq")]
+position = Vector2(-59, -57)
+
+[node name="Folliage_01" type="StaticBody2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-227, 62)
+rotation = -0.261799
+scale = Vector2(1, 1)
+
+[node name="Chupetin_02" parent="Folliage_01" instance=ExtResource("5_qr0vi")]
+scale = Vector2(1, 1)
+
+[node name="Flor_Amarilla_Clarita_01" parent="Folliage_01" instance=ExtResource("6_wgrjc")]
+position = Vector2(52.5525, 62.7394)
+rotation = -2.87979
+scale = Vector2(0.2, 0.2)
+
+[node name="Flor_Violeta_01" parent="Folliage_01" instance=ExtResource("7_vlryo")]
+position = Vector2(71.2118, 85.5678)
+rotation = 0.261799
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Folliage_01"]
+position = Vector2(63.1748, 73.0615)
+rotation = 0.261799
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_qr0vi")
+
+[node name="Folliage_02" type="StaticBody2D" parent="."]
+y_sort_enabled = true
+
+[node name="Frutilla_01" parent="Folliage_02" instance=ExtResource("8_3o71o")]
+position = Vector2(-484.763, 178)
+scale = Vector2(0.5, 0.5)
+
+[node name="Frutilla_02" parent="Folliage_02" instance=ExtResource("8_3o71o")]
+position = Vector2(-557.763, 221)
+rotation = -0.349066
+scale = Vector2(0.25, 0.25)
+flip_h = true
+
+[node name="Flor_Violeta_02" parent="Folliage_02" instance=ExtResource("7_vlryo")]
+position = Vector2(-512.763, 235)
+scale = Vector2(0.2, 0.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Folliage_02"]
+position = Vector2(-503, 214)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_vlryo")
+
+[node name="Folliage_03" type="StaticBody2D" parent="."]
+y_sort_enabled = true
+
+[node name="Chupetin_01" parent="Folliage_03" instance=ExtResource("9_vlryo")]
+position = Vector2(-798.887, 28.1987)
+rotation = 0.349066
+scale = Vector2(0.5, 0.5)
+
+[node name="Flor_Amarilla_01" parent="Folliage_03" instance=ExtResource("10_3o71o")]
+position = Vector2(-814.887, 62.1987)
+scale = Vector2(0.3, 0.3)
+
+[node name="Flor_Amarilla_Clarita_01" parent="Folliage_03" instance=ExtResource("6_wgrjc")]
+position = Vector2(-749.887, 64.1987)
+rotation = -3.14159
+scale = Vector2(0.2, 0.2)
+
+[node name="Flor_Amarilla_Clarita_02" parent="Folliage_03" instance=ExtResource("6_wgrjc")]
+position = Vector2(-859.887, 92.1987)
+rotation = -1.48353
+scale = Vector2(0.2, 0.2)
+
+[node name="Flor_Violeta_01" parent="Folliage_03" instance=ExtResource("7_vlryo")]
+position = Vector2(-797.887, 107.199)
+scale = Vector2(0.2, 0.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Folliage_03"]
+position = Vector2(-798, 70)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_vlryo")
+
+[node name="Folliage_04" type="StaticBody2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-787, 383)
+
+[node name="Sandia_01" parent="Folliage_04" instance=ExtResource("11_xx8c3")]
+position = Vector2(53, -13)
+scale = Vector2(0.5, 0.5)
+flip_h = true
+
+[node name="Caramelo_01" parent="Folliage_04" instance=ExtResource("12_7rb6d")]
+position = Vector2(109, 70)
+scale = Vector2(0.3, 0.3)
+
+[node name="Flor_Amarilla_02" parent="Folliage_04" instance=ExtResource("13_4vay5")]
+position = Vector2(-21, 67)
+rotation = -0.872665
+scale = Vector2(0.2, 0.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Folliage_04"]
+position = Vector2(53, 18)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_0mbvg")

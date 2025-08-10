@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6pgkgn1qykbq"]
+
+[ext_resource type="Texture2D" uid="uid://5s3p5x1au54g" path="res://Assets/Objetos/mundo cute/flor amarilla clarita 1.png" id="1_ibiyk"]
+
+[node name="Flor_Amarilla_Clarita_01" type="Sprite2D"]
+y_sort_enabled = true
+texture = ExtResource("1_ibiyk")

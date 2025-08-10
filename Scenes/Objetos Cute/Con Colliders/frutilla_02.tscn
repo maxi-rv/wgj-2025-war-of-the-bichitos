@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bne5k0bxciobq"]
+
+[ext_resource type="Texture2D" uid="uid://cn7edvsqgwifw" path="res://Assets/Objetos/mundo cute/frutilla 2.png" id="1_4ll1j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfaqu"]
+radius = 53.0
+height = 344.0
+
+[node name="Frutilla_02" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4ll1j")
+offset = Vector2(0, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, 20)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_vfaqu")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1u51adiuj4tb"]
+
+[ext_resource type="Texture2D" uid="uid://cn7edvsqgwifw" path="res://Assets/Objetos/mundo cute/frutilla 2.png" id="1_r2rss"]
+
+[node name="Frutilla_02" type="Sprite2D"]
+texture = ExtResource("1_r2rss")
+offset = Vector2(0, -50)

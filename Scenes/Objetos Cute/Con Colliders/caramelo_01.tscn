@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://vjgurecn3qjh"]
+
+[ext_resource type="Texture2D" uid="uid://ce7166krx5v0f" path="res://Assets/Objetos/mundo cute/caramelo 1.png" id="1_yxca7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5f7o"]
+radius = 17.0
+height = 318.0
+
+[node name="Caramelo_01" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yxca7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(32, 13)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_r5f7o")

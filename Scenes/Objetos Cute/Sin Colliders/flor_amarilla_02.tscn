@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2xijhro83qgr"]
+
+[ext_resource type="Texture2D" uid="uid://d3kvbi340bgvl" path="res://Assets/Objetos/mundo cute/flor amarilla 2.png" id="1_o0wkr"]
+
+[node name="Flor_Amarilla_02" type="Sprite2D"]
+y_sort_enabled = true
+texture = ExtResource("1_o0wkr")
+offset = Vector2(0, -50)

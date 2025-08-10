@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc8cdesjixvuv"]
+
+[ext_resource type="Texture2D" uid="uid://ce7166krx5v0f" path="res://Assets/Objetos/mundo cute/caramelo 1.png" id="1_ridrk"]
+
+[node name="Caramelo_01" type="Sprite2D"]
+y_sort_enabled = true
+texture = ExtResource("1_ridrk")

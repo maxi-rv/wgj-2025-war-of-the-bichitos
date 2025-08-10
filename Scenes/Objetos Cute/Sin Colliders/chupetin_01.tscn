@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2maqpp3u2wbn"]
+
+[ext_resource type="Texture2D" uid="uid://cmnsnq7mm5cca" path="res://Assets/Objetos/mundo cute/chupetinn 1.png" id="1_tvs57"]
+
+[node name="Chupetin_01" type="Sprite2D"]
+y_sort_enabled = true
+texture = ExtResource("1_tvs57")
+offset = Vector2(0, -100)

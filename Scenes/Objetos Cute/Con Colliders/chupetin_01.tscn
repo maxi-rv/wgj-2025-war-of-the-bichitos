@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvj5bh58n2hs0"]
+
+[ext_resource type="Texture2D" uid="uid://cmnsnq7mm5cca" path="res://Assets/Objetos/mundo cute/chupetinn 1.png" id="1_jcvjn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vw06t"]
+radius = 7.0
+height = 54.0
+
+[node name="Chupetin_01" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jcvjn")
+offset = Vector2(0, -100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13, 0)
+shape = SubResource("CapsuleShape2D_vw06t")

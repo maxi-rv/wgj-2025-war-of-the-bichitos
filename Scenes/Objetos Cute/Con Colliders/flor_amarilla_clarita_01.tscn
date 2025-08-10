@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdm0w8qjg12pp"]
+
+[ext_resource type="Texture2D" uid="uid://5s3p5x1au54g" path="res://Assets/Objetos/mundo cute/flor amarilla clarita 1.png" id="1_nokml"]
+
+[node name="Flor_Amarilla_Clarita_01" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nokml")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(142, -37, 58, -65, -52, -78, -142, -59, -143, -2, 141, -2)

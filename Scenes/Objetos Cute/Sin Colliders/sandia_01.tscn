@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://durlh6uom057q"]
+
+[ext_resource type="Texture2D" uid="uid://co553xmcls7ar" path="res://Assets/Objetos/mundo cute/sandia.png" id="1_jw8xs"]
+
+[node name="Sandia_01" type="Sprite2D"]
+texture = ExtResource("1_jw8xs")

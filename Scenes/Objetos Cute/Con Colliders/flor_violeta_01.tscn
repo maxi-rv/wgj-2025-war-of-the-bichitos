@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6ydanv3eia4t"]
+
+[ext_resource type="Texture2D" uid="uid://cmlojxm320xfs" path="res://Assets/Objetos/mundo cute/flor violeta 1.png" id="1_6ykf6"]
+
+[node name="Flor_Violeta_01" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6ykf6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-34, -1)
+polygon = PackedVector2Array(217, -50, 118, -80, -101, -82, -138, -49, -145, -15, 34, 0, 216, -16)

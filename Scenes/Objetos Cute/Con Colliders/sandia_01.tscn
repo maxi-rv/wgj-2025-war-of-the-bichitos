@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyogw0gvleeqg"]
+
+[ext_resource type="Texture2D" uid="uid://co553xmcls7ar" path="res://Assets/Objetos/mundo cute/sandia.png" id="1_540jb"]
+
+[node name="Sandia_01" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_540jb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-218, -22, -236, 18, -211, 98, 217, 98, 244, 25, 237, -21)

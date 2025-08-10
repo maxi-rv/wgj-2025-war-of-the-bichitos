@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bef5l5b3jb3ji"]
+
+[ext_resource type="Texture2D" uid="uid://ci6xrx8i3cba8" path="res://Assets/Objetos/mundo cute/frutilla 1.png" id="1_kr8qm"]
+
+[node name="Frutilla_01" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kr8qm")
+offset = Vector2(0, -60)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-153, -57, -150, 38, 127, 42, 121, 15, 67, 6, 53, -55)

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjl143ugualqh"]
+
+[ext_resource type="Texture2D" uid="uid://cmlojxm320xfs" path="res://Assets/Objetos/mundo cute/flor violeta 1.png" id="1_kc16s"]
+
+[node name="Flor_Violeta_01" type="Sprite2D"]
+y_sort_enabled = true
+texture = ExtResource("1_kc16s")

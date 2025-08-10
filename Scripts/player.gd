@@ -26,10 +26,23 @@ func _physics_process(delta):
 	move_and_slide()
 
 func handle_animations():
-	if character_direction.x > 0:
+	if character_direction.y > 0:
+		animated_sprite_2d.play("down")
+		collision_shape_2d.position.x = 4
+		collision_shape_2d.position.y = -28
+	elif character_direction.y < 0:
+		animated_sprite_2d.play("up")
+		collision_shape_2d.position.x = 4
+		collision_shape_2d.position.y = -28
+	elif character_direction.x > 0:
 		animated_sprite_2d.play("right")
+		collision_shape_2d.position.x = 88
+		collision_shape_2d.position.y = 32
 	elif character_direction.x < 0:
 		animated_sprite_2d.play("left")
+		collision_shape_2d.position.x = -60
+		collision_shape_2d.position.y = 32
+	
 
 func _on_area_2d_area_entered(area: Area2D):
 	var areaParent = area.get_parent()
