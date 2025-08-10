@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://w72cl40rqmpp"]
+[gd_scene load_steps=10 format=3 uid="uid://w72cl40rqmpp"]
 
 [ext_resource type="Script" uid="uid://ccgsetxpn45iq" path="res://Scripts/maze_01.gd" id="1_y2vf1"]
 [ext_resource type="Texture2D" uid="uid://dywqr5g84ily4" path="res://Assets/Fondo/oscuro.png" id="2_kgxvy"]
 [ext_resource type="PackedScene" uid="uid://k528gspw45so" path="res://Scenes/player.tscn" id="3_7wrgn"]
 [ext_resource type="Texture2D" uid="uid://dqhm76ig305jf" path="res://Assets/Fondo/Laberinto.png" id="3_gmive"]
+[ext_resource type="AudioStream" uid="uid://df05mxom4fae5" path="res://Sound/TORSION - Density & Time.mp3" id="5_kgxvy"]
 
 [sub_resource type="Gradient" id="Gradient_cvnsp"]
 offsets = PackedFloat32Array(0, 0.145062, 0.469136, 1)
@@ -45,9 +46,9 @@ texture_scale = 30.0
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-130, 0)
 scale = Vector2(4, 4)
-limit_left = -4750
+limit_left = -4450
 limit_top = -2600
-limit_right = 4750
+limit_right = 4400
 limit_bottom = 2600
 limit_smoothed = true
 
@@ -285,3 +286,8 @@ rotation = 3.14159
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLimit2"]
 shape = SubResource("WorldBoundaryShape2D_y2vf1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_kgxvy")
+autoplay = true
+bus = &"Music"
