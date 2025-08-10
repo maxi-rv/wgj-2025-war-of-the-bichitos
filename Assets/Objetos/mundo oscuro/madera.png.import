@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxch6a8e4deey"
-path="res://.godot/imported/flor amarilla clarita 2.png-5193b40b073eebe8a4d05ba0d31f558e.ctex"
+uid="uid://b45p6wbw2cyb2"
+path="res://.godot/imported/madera.png-31dcb82d55b625029d42b5adc3546048.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo cute/flor amarilla clarita 2.png"
-dest_files=["res://.godot/imported/flor amarilla clarita 2.png-5193b40b073eebe8a4d05ba0d31f558e.ctex"]
+source_file="res://Assets/Objetos/mundo oscuro/madera.png"
+dest_files=["res://.godot/imported/madera.png-31dcb82d55b625029d42b5adc3546048.ctex"]
 
 [params]
 

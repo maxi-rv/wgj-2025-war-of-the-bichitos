@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb53q4r002bws"
-path="res://.godot/imported/coral violeta 2.png-dc5330f6b92781a706849141ba21ce49.ctex"
+uid="uid://daex81wve0412"
+path="res://.godot/imported/coral violeta 1.png-f9ec1d0faa9347f1b8dcc09e112e0c0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo oscurp/coral violeta 2.png"
-dest_files=["res://.godot/imported/coral violeta 2.png-dc5330f6b92781a706849141ba21ce49.ctex"]
+source_file="res://Assets/Objetos/mundo oscuro/coral violeta 1.png"
+dest_files=["res://.godot/imported/coral violeta 1.png-f9ec1d0faa9347f1b8dcc09e112e0c0d.ctex"]
 
 [params]
 

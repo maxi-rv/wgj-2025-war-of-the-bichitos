@@ -32,16 +32,19 @@ shape = SubResource("CircleShape2D_5wisk")
 shape = SubResource("CircleShape2D_tvo8h")
 
 [node name="Dialog_Scared_Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(0, -150)
 scale = Vector2(2, 2)
 texture = ExtResource("3_3hugu")
 
 [node name="Dialog_Sad_Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(0, -150)
 scale = Vector2(2, 2)
 texture = ExtResource("4_whlby")
 
 [node name="Dialog_Happy_Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(0, -150)
 scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_oibs6")

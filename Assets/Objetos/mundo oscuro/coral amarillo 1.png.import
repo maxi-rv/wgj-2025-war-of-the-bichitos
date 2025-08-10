@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh0jao8mb0xa5"
-path="res://.godot/imported/coral rojo 1.png-4c66528aaa7d710273e62567a668d856.ctex"
+uid="uid://d07mfwimu21y"
+path="res://.godot/imported/coral amarillo 1.png-b667d3008e186bf8c3e69f66db8fb619.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo oscurp/coral rojo 1.png"
-dest_files=["res://.godot/imported/coral rojo 1.png-4c66528aaa7d710273e62567a668d856.ctex"]
+source_file="res://Assets/Objetos/mundo oscuro/coral amarillo 1.png"
+dest_files=["res://.godot/imported/coral amarillo 1.png-b667d3008e186bf8c3e69f66db8fb619.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b45p6wbw2cyb2"
-path="res://.godot/imported/madera.png-30f9d9c582e823c297b7ba87b9d293ee.ctex"
+uid="uid://bo7gu2n6a8b8k"
+path="res://.godot/imported/burbuja.png-d0149750d4e73a3ad42e70b98f5f4c39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo oscurp/madera.png"
-dest_files=["res://.godot/imported/madera.png-30f9d9c582e823c297b7ba87b9d293ee.ctex"]
+source_file="res://Assets/Objetos/mundo oscuro/burbuja.png"
+dest_files=["res://.godot/imported/burbuja.png-d0149750d4e73a3ad42e70b98f5f4c39.ctex"]
 
 [params]
 

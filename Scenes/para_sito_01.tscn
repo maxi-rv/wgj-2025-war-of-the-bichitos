@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dn07lhg3pi7tw" path="res://Assets/placeholders/dialog_kenneys_style7.png" id="5_nybn7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhqt3"]
-radius = 49.163
+radius = 39.0512
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_31n2j"]
 radius = 186.003
@@ -33,16 +33,19 @@ shape = SubResource("CircleShape2D_mhqt3")
 shape = SubResource("CircleShape2D_31n2j")
 
 [node name="Dialog_Scared_Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(-28, -120)
 scale = Vector2(2, 2)
 texture = ExtResource("3_rp43y")
 
 [node name="Dialog_Sad_Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(-28, -120)
 scale = Vector2(2, 2)
 texture = ExtResource("4_nwsvf")
 
 [node name="Dialog_Happy_Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(-28, -120)
 scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_n28fp")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvwxwxctcoq38"
-path="res://.godot/imported/huesos 2.png-3e252759b3ba2ac79a38d17f8921f0b0.ctex"
+path="res://.godot/imported/huesos 2.png-9a81e4289281190334642bd49af4a1f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo oscurp/huesos 2.png"
-dest_files=["res://.godot/imported/huesos 2.png-3e252759b3ba2ac79a38d17f8921f0b0.ctex"]
+source_file="res://Assets/Objetos/mundo oscuro/huesos 2.png"
+dest_files=["res://.godot/imported/huesos 2.png-9a81e4289281190334642bd49af4a1f3.ctex"]
 
 [params]
 

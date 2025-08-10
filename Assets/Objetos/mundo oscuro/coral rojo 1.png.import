@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmsw31jelj6po"
-path="res://.godot/imported/coralcito violeta 1.png-49aeb9933e4337a2866d2a2619703b6d.ctex"
+uid="uid://dh0jao8mb0xa5"
+path="res://.godot/imported/coral rojo 1.png-eb44d1d46899a56ba52345e78258f41b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo oscurp/coralcito violeta 1.png"
-dest_files=["res://.godot/imported/coralcito violeta 1.png-49aeb9933e4337a2866d2a2619703b6d.ctex"]
+source_file="res://Assets/Objetos/mundo oscuro/coral rojo 1.png"
+dest_files=["res://.godot/imported/coral rojo 1.png-eb44d1d46899a56ba52345e78258f41b.ctex"]
 
 [params]
 

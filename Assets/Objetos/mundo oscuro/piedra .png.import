@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo7gu2n6a8b8k"
-path="res://.godot/imported/burbuja.png-4edcf7fc0b124ed663cd08fa740527a1.ctex"
+uid="uid://byopnfpksm7cb"
+path="res://.godot/imported/piedra .png-836b8b3143528b82f372bdb9e12a4b93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo oscurp/burbuja.png"
-dest_files=["res://.godot/imported/burbuja.png-4edcf7fc0b124ed663cd08fa740527a1.ctex"]
+source_file="res://Assets/Objetos/mundo oscuro/piedra .png"
+dest_files=["res://.godot/imported/piedra .png-836b8b3143528b82f372bdb9e12a4b93.ctex"]
 
 [params]
 

@@ -35,16 +35,19 @@ rotation = 1.5708
 shape = SubResource("CircleShape2D_1bpw3")
 
 [node name="Dialog_Scared_Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(0, -90)
 scale = Vector2(2, 2)
 texture = ExtResource("3_qlu3j")
 
 [node name="Dialog_Sad_Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(0, -90)
 scale = Vector2(2, 2)
 texture = ExtResource("4_5g6fa")
 
 [node name="Dialog_Happy_Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(0, -90)
 scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_8hqr8")

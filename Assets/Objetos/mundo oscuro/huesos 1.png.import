@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daex81wve0412"
-path="res://.godot/imported/coral violeta 1.png-0150b9fb369ffe19c627835f1a8879b8.ctex"
+uid="uid://ioj2uj6ft681"
+path="res://.godot/imported/huesos 1.png-140aff6745d199c7f28246f66d01c842.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo oscurp/coral violeta 1.png"
-dest_files=["res://.godot/imported/coral violeta 1.png-0150b9fb369ffe19c627835f1a8879b8.ctex"]
+source_file="res://Assets/Objetos/mundo oscuro/huesos 1.png"
+dest_files=["res://.godot/imported/huesos 1.png-140aff6745d199c7f28246f66d01c842.ctex"]
 
 [params]
 

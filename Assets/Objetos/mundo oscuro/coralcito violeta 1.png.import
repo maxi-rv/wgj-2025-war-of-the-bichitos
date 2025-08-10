@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byopnfpksm7cb"
-path="res://.godot/imported/piedra .png-8e4f99e08b764fa493a753622dd0cf31.ctex"
+uid="uid://cmsw31jelj6po"
+path="res://.godot/imported/coralcito violeta 1.png-cea812882a4812161d9dca79fa28078c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo oscurp/piedra .png"
-dest_files=["res://.godot/imported/piedra .png-8e4f99e08b764fa493a753622dd0cf31.ctex"]
+source_file="res://Assets/Objetos/mundo oscuro/coralcito violeta 1.png"
+dest_files=["res://.godot/imported/coralcito violeta 1.png-cea812882a4812161d9dca79fa28078c.ctex"]
 
 [params]
 
