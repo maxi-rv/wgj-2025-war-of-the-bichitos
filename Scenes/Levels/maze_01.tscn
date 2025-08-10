@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://w72cl40rqmpp"]
 
-[ext_resource type="PackedScene" uid="uid://k528gspw45so" path="res://Scenes/player.tscn" id="1_cm7ct"]
-[ext_resource type="Script" uid="uid://ccgsetxpn45iq" path="res://Scripts/maze_01.gd" id="1_lfhok"]
-[ext_resource type="Texture2D" uid="uid://dywqr5g84ily4" path="res://Assets/Fondo/oscuro.png" id="1_qu4ft"]
-[ext_resource type="PackedScene" uid="uid://bw7puhn2jgirm" path="res://Scenes/bichito_01.tscn" id="3_qu4ft"]
+[ext_resource type="Script" uid="uid://ccgsetxpn45iq" path="res://Scripts/maze_01.gd" id="1_y2vf1"]
+[ext_resource type="Texture2D" uid="uid://dywqr5g84ily4" path="res://Assets/Fondo/oscuro.png" id="2_kgxvy"]
+[ext_resource type="PackedScene" uid="uid://k528gspw45so" path="res://Scenes/player.tscn" id="3_7wrgn"]
+[ext_resource type="PackedScene" uid="uid://bw7puhn2jgirm" path="res://Scenes/bichito_01.tscn" id="4_tbgog"]
 
 [sub_resource type="Gradient" id="Gradient_cvnsp"]
 offsets = PackedFloat32Array(0, 0.0578512, 1)
@@ -21,30 +21,47 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-919, -511, 930, -515, 916, 510, -921, 513)])
 
 [node name="Maze_01" type="Node2D"]
-modulate = Color(0.589096, 0.589096, 0.589096, 1)
+modulate = Color(0.0962047, 0.0962048, 0.0962047, 1)
 y_sort_enabled = true
-script = ExtResource("1_lfhok")
+script = ExtResource("1_y2vf1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -1
-texture = ExtResource("1_qu4ft")
+texture = ExtResource("2_kgxvy")
 
-[node name="Player" parent="." instance=ExtResource("1_cm7ct")]
+[node name="Player" parent="." instance=ExtResource("3_7wrgn")]
 position = Vector2(162, 331)
 
 [node name="Aura_PointLight2D2" type="PointLight2D" parent="Player"]
 scale = Vector2(3, 3)
+energy = 6.0
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_lfhok")
 texture_scale = 10.0
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(-2, 0)
 navigation_polygon = SubResource("NavigationPolygon_rv3w7")
 
-[node name="Bichito_01" parent="NavigationRegion2D" instance=ExtResource("3_qu4ft")]
+[node name="Bichito_01" parent="NavigationRegion2D" instance=ExtResource("4_tbgog")]
 position = Vector2(-660, -294)
+
+[node name="Bichito_02" parent="NavigationRegion2D" instance=ExtResource("4_tbgog")]
+position = Vector2(-664, 19)
+
+[node name="Bichito_03" parent="NavigationRegion2D" instance=ExtResource("4_tbgog")]
+position = Vector2(-667, 330)
+
+[node name="Bichito_04" parent="NavigationRegion2D" instance=ExtResource("4_tbgog")]
+position = Vector2(743, -320)
+
+[node name="Bichito_05" parent="NavigationRegion2D" instance=ExtResource("4_tbgog")]
+position = Vector2(743, 4)
+
+[node name="Bichito_06" parent="NavigationRegion2D" instance=ExtResource("4_tbgog")]
+position = Vector2(747, 321)
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 position = Vector2(-159, -93)

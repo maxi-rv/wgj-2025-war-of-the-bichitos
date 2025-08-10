@@ -3,16 +3,17 @@ extends CharacterBody2D
 class_name Bichito
 
 @onready var sprite_2d = $Sprite2D
-@onready var collision_shape_2d = $CollisionShape2D
-@onready var area_2d = $Area2D
-@onready var area_2d_collision_shape_2d = $Area2D/CollisionShape2D
+@onready var collision_shape_2d = $Area2D_Monitorable/CollisionShape2D
+@onready var area_2d_collision_shape_2d = $Area2D_Monitoring/CollisionShape2D
 @onready var nav_agent = $NavigationAgent2D
 
 @onready var dialog_scared_sprite_2d = $Dialog_Scared_Sprite2D
 @onready var dialog_sad_sprite_2d = $Dialog_Sad_Sprite2D
 @onready var dialog_happy_sprite_2d = $Dialog_Happy_Sprite2D
 
-@export var speed = 500
+@export var speed = 300
+@export var chasing = false
+@export var player: CharacterBody2D
 
 func _ready():
 	dialog_happy_sprite_2d.visible = true
@@ -26,7 +27,7 @@ func _ready():
 	randf_range(0, get_viewport_rect().size.y)
 	))
 
-func _process(delta):
+func _physics_process(delta):
 	var next_path_pos = nav_agent.get_next_path_position()
 	var direction = global_position.direction_to(next_path_pos)
 	var new_velocity = direction.normalized() * speed
@@ -34,10 +35,13 @@ func _process(delta):
 	nav_agent.velocity = new_velocity
 
 func _on_nav_finished():
-	make_path(Vector2(
-	randf_range(0, get_viewport_rect().size.x),
-	randf_range(0, get_viewport_rect().size.y)
-	))
+	if !chasing:
+		make_path(Vector2(
+		randf_range(0, get_viewport_rect().size.x),
+		randf_range(0, get_viewport_rect().size.y)
+		))
+	elif chasing:
+		make_path(player.global_position)
 	
 func _on_navigation_agent_2d_velocity_computed(safe_velocity):
 	velocity = velocity.move_toward(safe_velocity, 100)
@@ -57,6 +61,9 @@ func _on_area_2d_area_entered(area):
 		dialog_happy_sprite_2d.visible = false
 		dialog_sad_sprite_2d.visible = true
 		dialog_scared_sprite_2d.visible = false
+		chasing = true
+		player = areaParent
+		make_path(areaParent.global_position)
 
 
 func _on_area_2d_area_exited(area):
@@ -65,3 +72,8 @@ func _on_area_2d_area_exited(area):
 		dialog_happy_sprite_2d.visible = false
 		dialog_sad_sprite_2d.visible = false
 		dialog_scared_sprite_2d.visible = true
+		chasing = false
+		make_path(Vector2(
+		randf_range(0, get_viewport_rect().size.x),
+		randf_range(0, get_viewport_rect().size.y)
+		))

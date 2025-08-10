@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3f7fl1oqx6hq"
-path="res://.godot/imported/flor amarilla 1.png-25a3c1bf6896ecdd00ada2281b6eb0c8.ctex"
+uid="uid://b383f6s0u37po"
+path="res://.godot/imported/Grupo 1 izq.png-ad7decf0aeeaa8a2a83389eddb28f832.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo cute/flor amarilla 1.png"
-dest_files=["res://.godot/imported/flor amarilla 1.png-25a3c1bf6896ecdd00ada2281b6eb0c8.ctex"]
+source_file="res://Assets/Objetos/mundo cute - Grupos/Grupo 1 izq.png"
+dest_files=["res://.godot/imported/Grupo 1 izq.png-ad7decf0aeeaa8a2a83389eddb28f832.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5s3p5x1au54g"
-path="res://.godot/imported/flor amarilla clarita 1.png-b10ac3e4a421cf0fb1d15b4c5e405b78.ctex"
+uid="uid://n470fd66kwli"
+path="res://.godot/imported/Grupo decoración 1.png-759e08d95455e8360512e0673853ca9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo cute/flor amarilla clarita 1.png"
-dest_files=["res://.godot/imported/flor amarilla clarita 1.png-b10ac3e4a421cf0fb1d15b4c5e405b78.ctex"]
+source_file="res://Assets/Objetos/mundo cute - Grupos/Grupo decoración 1.png"
+dest_files=["res://.godot/imported/Grupo decoración 1.png-759e08d95455e8360512e0673853ca9b.ctex"]
 
 [params]
 

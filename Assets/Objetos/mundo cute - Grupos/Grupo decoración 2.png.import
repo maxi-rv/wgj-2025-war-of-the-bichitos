@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmlojxm320xfs"
-path="res://.godot/imported/flor violeta 1.png-4abd0e1132026226d5d80791561ff8d8.ctex"
+uid="uid://d1miy28b5icxn"
+path="res://.godot/imported/Grupo decoración 2.png-3a13b6cfd62792166d8de968a3efa150.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo cute/flor violeta 1.png"
-dest_files=["res://.godot/imported/flor violeta 1.png-4abd0e1132026226d5d80791561ff8d8.ctex"]
+source_file="res://Assets/Objetos/mundo cute - Grupos/Grupo decoración 2.png"
+dest_files=["res://.godot/imported/Grupo decoración 2.png-3a13b6cfd62792166d8de968a3efa150.ctex"]
 
 [params]
 

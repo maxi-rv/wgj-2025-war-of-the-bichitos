@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://nimj1708iaep"]
 
-[ext_resource type="Script" uid="uid://c703b0l1mfkic" path="res://Scripts/bichito.gd" id="1_mhqt3"]
+[ext_resource type="Script" uid="uid://bciy8npff8hiv" path="res://Scripts/pomodoro.gd" id="1_5onei"]
 [ext_resource type="Texture2D" uid="uid://hg03r7o0aiu3" path="res://Assets/Personajes/pomodoro.png" id="2_mhqt3"]
 [ext_resource type="Texture2D" uid="uid://bdpwsecmmg0ta" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_zzz.tres" id="3_mhqt3"]
 [ext_resource type="Texture2D" uid="uid://csaphfy65nbdq" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_money.tres" id="4_mhqt3"]
 [ext_resource type="Texture2D" uid="uid://b3lxx4w4kewxk" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_quest.tres" id="5_vb1y5"]
-[ext_resource type="Texture2D" uid="uid://ce7166krx5v0f" path="res://Assets/Objetos/mundo cute/caramelo 1.png" id="6_5onei"]
+[ext_resource type="Texture2D" uid="uid://ce7166krx5v0f" path="res://Assets/Objetos/mundo cute - individuales/caramelo 1.png" id="6_5onei"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5onei"]
 radius = 70.0
@@ -17,7 +17,7 @@ radius = 507.119
 [node name="Pomodoro" type="CharacterBody2D"]
 y_sort_enabled = true
 scale = Vector2(0.5, 0.5)
-script = ExtResource("1_mhqt3")
+script = ExtResource("1_5onei")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8, 122)
@@ -30,6 +30,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_5onei")
 
 [node name="Area2D" type="Area2D" parent="."]
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_31n2j")

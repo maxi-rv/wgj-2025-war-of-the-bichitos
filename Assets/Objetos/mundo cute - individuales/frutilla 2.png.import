@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn7edvsqgwifw"
-path="res://.godot/imported/frutilla 2.png-6fb0896cf2b1823293770b11ebbd65a1.ctex"
+path="res://.godot/imported/frutilla 2.png-11fcc9066d429cf3f1fee309fe53e713.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo cute/frutilla 2.png"
-dest_files=["res://.godot/imported/frutilla 2.png-6fb0896cf2b1823293770b11ebbd65a1.ctex"]
+source_file="res://Assets/Objetos/mundo cute - individuales/frutilla 2.png"
+dest_files=["res://.godot/imported/frutilla 2.png-11fcc9066d429cf3f1fee309fe53e713.ctex"]
 
 [params]
 

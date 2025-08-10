@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce7166krx5v0f"
-path="res://.godot/imported/caramelo 1.png-a1ef510711f037524c95272d2fa42f4b.ctex"
+uid="uid://cmlojxm320xfs"
+path="res://.godot/imported/flor violeta 1.png-5a24a6366948e2feb1567dfc888ae0ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo cute/caramelo 1.png"
-dest_files=["res://.godot/imported/caramelo 1.png-a1ef510711f037524c95272d2fa42f4b.ctex"]
+source_file="res://Assets/Objetos/mundo cute - individuales/flor violeta 1.png"
+dest_files=["res://.godot/imported/flor violeta 1.png-5a24a6366948e2feb1567dfc888ae0ac.ctex"]
 
 [params]
 

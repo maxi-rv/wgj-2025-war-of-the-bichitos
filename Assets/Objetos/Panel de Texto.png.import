@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3kvbi340bgvl"
-path="res://.godot/imported/flor amarilla 2.png-0e9de1502ce8130b5abb2be627de4ccc.ctex"
+uid="uid://dm2t5tgfux1bp"
+path="res://.godot/imported/Panel de Texto.png-57d135872f08528d835c33b4382ee229.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo cute/flor amarilla 2.png"
-dest_files=["res://.godot/imported/flor amarilla 2.png-0e9de1502ce8130b5abb2be627de4ccc.ctex"]
+source_file="res://Assets/Objetos/Panel de Texto.png"
+dest_files=["res://.godot/imported/Panel de Texto.png-57d135872f08528d835c33b4382ee229.ctex"]
 
 [params]
 

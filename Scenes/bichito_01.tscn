@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c703b0l1mfkic" path="res://Scripts/bichito.gd" id="1_2pl11"]
 [ext_resource type="Texture2D" uid="uid://d33sfmn6efjf2" path="res://Assets/sketches/bichito_01.png" id="2_qjh8p"]
 [ext_resource type="Texture2D" uid="uid://dn07lhg3pi7tw" path="res://Assets/placeholders/dialog_kenneys_style7.png" id="3_qjh8p"]
-[ext_resource type="Texture2D" uid="uid://bdpwsecmmg0ta" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_zzz.tres" id="3_qlu3j"]
+[ext_resource type="Texture2D" uid="uid://coelbs5on1qbw" path="res://Assets/placeholders/Dialog_Atlas/dialog_scared.tres" id="3_qlu3j"]
 [ext_resource type="Texture2D" uid="uid://csaphfy65nbdq" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_money.tres" id="4_5g6fa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lsbmb"]
@@ -11,7 +11,7 @@ radius = 20.0
 height = 96.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bpw3"]
-radius = 149.402
+radius = 249.58
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8hqr8"]
 atlas = ExtResource("3_qjh8p")
@@ -26,18 +26,21 @@ path_postprocessing = 1
 avoidance_enabled = true
 radius = 125.0
 max_speed = 40000.0
-debug_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qjh8p")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D_Monitorable" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitorable"]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_lsbmb")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D_Monitoring" type="Area2D" parent="."]
+monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitoring"]
 rotation = 1.5708
 shape = SubResource("CircleShape2D_1bpw3")
 
@@ -59,5 +62,5 @@ position = Vector2(0, -90)
 scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_8hqr8")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Area2D_Monitoring" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D_Monitoring" to="." method="_on_area_2d_area_exited"]

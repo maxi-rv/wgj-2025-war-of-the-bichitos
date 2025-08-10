@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://k528gspw45so"]
+[gd_scene load_steps=12 format=3 uid="uid://k528gspw45so"]
 
 [ext_resource type="Script" uid="uid://cupr8gxmyrseg" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://kijlw5mewk8m" path="res://Assets/Personajes/frente  .png" id="2_8erm5"]
@@ -56,6 +56,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_vgqql"]
 radius = 136.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8erm5"]
+radius = 152.21
+
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 scale = Vector2(0.25, 0.25)
@@ -65,14 +68,18 @@ script = ExtResource("1_cvnsp")
 sprite_frames = SubResource("SpriteFrames_6t5aa")
 animation = &"down"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D_Monitorable" type="Area2D" parent="."]
 position = Vector2(88, 32)
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitorable"]
 shape = SubResource("CircleShape2D_vgqql")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D_Monitoring" type="Area2D" parent="."]
+monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitoring"]
 position = Vector2(88, 32)
-shape = SubResource("CircleShape2D_vgqql")
+shape = SubResource("CircleShape2D_8erm5")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D_Monitoring" to="." method="_on_area_2d_area_entered"]

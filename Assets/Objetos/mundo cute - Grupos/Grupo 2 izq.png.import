@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci6xrx8i3cba8"
-path="res://.godot/imported/frutilla 1.png-792060c461958d92e5a92ee571952fe4.ctex"
+uid="uid://bdrg30swbwefq"
+path="res://.godot/imported/Grupo 2 izq.png-010699534d48f74abd4ba4f2eeb73675.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/mundo cute/frutilla 1.png"
-dest_files=["res://.godot/imported/frutilla 1.png-792060c461958d92e5a92ee571952fe4.ctex"]
+source_file="res://Assets/Objetos/mundo cute - Grupos/Grupo 2 izq.png"
+dest_files=["res://.godot/imported/Grupo 2 izq.png-010699534d48f74abd4ba4f2eeb73675.ctex"]
 
 [params]
 
