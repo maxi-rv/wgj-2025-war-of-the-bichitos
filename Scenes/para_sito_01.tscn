@@ -1,20 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://nimj1708iaep"]
+[gd_scene load_steps=8 format=3 uid="uid://nimj1708iaep"]
 
 [ext_resource type="Script" uid="uid://c703b0l1mfkic" path="res://Scripts/bichito.gd" id="1_mhqt3"]
 [ext_resource type="Texture2D" uid="uid://dfnp3ctp21ddx" path="res://Assets/sketches/para-sito_01.png" id="2_vb1y5"]
-[ext_resource type="Texture2D" uid="uid://coelbs5on1qbw" path="res://Assets/placeholders/Dialog_Atlas/dialog_scared.tres" id="3_rp43y"]
-[ext_resource type="Texture2D" uid="uid://chmtrex2amou7" path="res://Assets/placeholders/Dialog_Atlas/dialog_sad.tres" id="4_nwsvf"]
-[ext_resource type="Texture2D" uid="uid://dn07lhg3pi7tw" path="res://Assets/placeholders/dialog_kenneys_style7.png" id="5_nybn7"]
+[ext_resource type="Texture2D" uid="uid://bdpwsecmmg0ta" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_zzz.tres" id="3_mhqt3"]
+[ext_resource type="Texture2D" uid="uid://csaphfy65nbdq" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_money.tres" id="4_mhqt3"]
+[ext_resource type="Texture2D" uid="uid://b3lxx4w4kewxk" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_quest.tres" id="5_vb1y5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhqt3"]
 radius = 39.0512
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_31n2j"]
 radius = 186.003
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n28fp"]
-atlas = ExtResource("5_nybn7")
-region = Rect2(192, 0, 32, 37)
 
 [node name="Para-sito_01" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -36,16 +32,19 @@ shape = SubResource("CircleShape2D_31n2j")
 z_index = 1
 position = Vector2(-28, -120)
 scale = Vector2(2, 2)
-texture = ExtResource("3_rp43y")
+texture = ExtResource("3_mhqt3")
 
 [node name="Dialog_Sad_Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(-28, -120)
 scale = Vector2(2, 2)
-texture = ExtResource("4_nwsvf")
+texture = ExtResource("4_mhqt3")
 
 [node name="Dialog_Happy_Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(-28, -120)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_n28fp")
+texture = ExtResource("5_vb1y5")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

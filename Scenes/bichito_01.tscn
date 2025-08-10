@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://c703b0l1mfkic" path="res://Scripts/bichito.gd" id="1_2pl11"]
 [ext_resource type="Texture2D" uid="uid://d33sfmn6efjf2" path="res://Assets/sketches/bichito_01.png" id="2_qjh8p"]
 [ext_resource type="Texture2D" uid="uid://dn07lhg3pi7tw" path="res://Assets/placeholders/dialog_kenneys_style7.png" id="3_qjh8p"]
-[ext_resource type="Texture2D" uid="uid://coelbs5on1qbw" path="res://Assets/placeholders/Dialog_Atlas/dialog_scared.tres" id="3_qlu3j"]
-[ext_resource type="Texture2D" uid="uid://chmtrex2amou7" path="res://Assets/placeholders/Dialog_Atlas/dialog_sad.tres" id="4_5g6fa"]
+[ext_resource type="Texture2D" uid="uid://bdpwsecmmg0ta" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_zzz.tres" id="3_qlu3j"]
+[ext_resource type="Texture2D" uid="uid://csaphfy65nbdq" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_money.tres" id="4_5g6fa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lsbmb"]
 radius = 20.0
