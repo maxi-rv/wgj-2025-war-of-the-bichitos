@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://w72cl40rqmpp"]
+[gd_scene load_steps=9 format=3 uid="uid://w72cl40rqmpp"]
 
 [ext_resource type="Script" uid="uid://ccgsetxpn45iq" path="res://Scripts/maze_01.gd" id="1_y2vf1"]
 [ext_resource type="Texture2D" uid="uid://dywqr5g84ily4" path="res://Assets/Fondo/oscuro.png" id="2_kgxvy"]
@@ -17,6 +17,8 @@ fill_to = Vector2(1, 0.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y2vf1"]
 size = Vector2(61, 1296)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y2vf1"]
 
 [node name="Maze_01" type="Node2D"]
 modulate = Color(0.118581, 0.118581, 0.118581, 1)
@@ -41,16 +43,17 @@ texture = SubResource("GradientTexture2D_lfhok")
 texture_scale = 30.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-130, 0)
 scale = Vector2(4, 4)
-limit_left = -2880
-limit_top = -1620
-limit_right = 2880
-limit_bottom = 1620
+limit_left = -4750
+limit_top = -2700
+limit_right = 4750
+limit_bottom = 2700
+limit_smoothed = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Laberinto" type="Sprite2D" parent="."]
-position = Vector2(64, 3)
 texture = ExtResource("3_gmive")
 
 [node name="Walls" type="StaticBody2D" parent="."]
@@ -270,3 +273,16 @@ position = Vector2(3131, 1279)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_y2vf1")
 debug_color = Color(0.583583, 0.0558292, 0.123015, 0.42)
+
+[node name="WorldLimit" type="StaticBody2D" parent="."]
+position = Vector2(0, 2699)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLimit"]
+shape = SubResource("WorldBoundaryShape2D_y2vf1")
+
+[node name="WorldLimit2" type="StaticBody2D" parent="."]
+position = Vector2(0, -2687)
+rotation = 3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLimit2"]
+shape = SubResource("WorldBoundaryShape2D_y2vf1")
