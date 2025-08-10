@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://w72cl40rqmpp"]
+[gd_scene load_steps=13 format=3 uid="uid://w72cl40rqmpp"]
 
 [ext_resource type="Script" uid="uid://ccgsetxpn45iq" path="res://Scripts/maze_01.gd" id="1_y2vf1"]
 [ext_resource type="Texture2D" uid="uid://dywqr5g84ily4" path="res://Assets/Fondo/oscuro.png" id="2_kgxvy"]
 [ext_resource type="PackedScene" uid="uid://k528gspw45so" path="res://Scenes/player.tscn" id="3_7wrgn"]
 [ext_resource type="Texture2D" uid="uid://dqhm76ig305jf" path="res://Assets/Fondo/Laberinto.png" id="3_gmive"]
 [ext_resource type="AudioStream" uid="uid://df05mxom4fae5" path="res://Sound/TORSION - Density & Time.mp3" id="5_kgxvy"]
+[ext_resource type="PackedScene" uid="uid://bri735pi12g0u" path="res://Scenes/bichito_02.tscn" id="6_7wrgn"]
+[ext_resource type="Script" uid="uid://vl8jbh2ngxvs" path="res://scripts/path_follow_2d.gd" id="6_tbgog"]
 
 [sub_resource type="Gradient" id="Gradient_cvnsp"]
 offsets = PackedFloat32Array(0, 0.145062, 0.469136, 1)
@@ -21,12 +23,19 @@ size = Vector2(61, 1296)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y2vf1"]
 
+[sub_resource type="Curve2D" id="Curve2D_kgxvy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 100, 6, 0, 0, 0, 0, 721, 9, 0, 0, 0, 0, 722, 20, 0, 0, 0, 0, 100, 18, 0, 0, 0, 0, 100, 6)
+}
+point_count = 5
+
 [node name="Maze_01" type="Node2D"]
 modulate = Color(0.118581, 0.118581, 0.118581, 1)
 y_sort_enabled = true
 script = ExtResource("1_y2vf1")
 
 [node name="Background1" type="Sprite2D" parent="."]
+visible = false
 z_index = -1
 texture_repeat = 2
 scale = Vector2(5, 5)
@@ -291,3 +300,70 @@ shape = SubResource("WorldBoundaryShape2D_y2vf1")
 stream = ExtResource("5_kgxvy")
 autoplay = true
 bus = &"Music"
+
+[node name="EnemyPaths" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="EnemyPaths"]
+position = Vector2(-1666, -1135)
+curve = SubResource("Curve2D_kgxvy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="EnemyPaths/Path2D"]
+position = Vector2(100, 6)
+rotation = 1.38545
+rotates = false
+script = ExtResource("6_tbgog")
+
+[node name="Bichito_02" parent="EnemyPaths/Path2D/PathFollow2D" instance=ExtResource("6_7wrgn")]
+rotation = -1.5708
+
+[node name="Path2D2" type="Path2D" parent="EnemyPaths"]
+position = Vector2(889, -210)
+curve = SubResource("Curve2D_kgxvy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="EnemyPaths/Path2D2"]
+position = Vector2(100, 6)
+rotation = 1.38545
+rotates = false
+script = ExtResource("6_tbgog")
+
+[node name="Bichito_02" parent="EnemyPaths/Path2D2/PathFollow2D" instance=ExtResource("6_7wrgn")]
+rotation = -1.5708
+
+[node name="Path2D3" type="Path2D" parent="EnemyPaths"]
+position = Vector2(2154, -1556)
+curve = SubResource("Curve2D_kgxvy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="EnemyPaths/Path2D3"]
+position = Vector2(100, 6)
+rotation = 0.00483088
+script = ExtResource("6_tbgog")
+
+[node name="Bichito_02" parent="EnemyPaths/Path2D3/PathFollow2D" instance=ExtResource("6_7wrgn")]
+rotation = -0.225147
+
+[node name="Path2D4" type="Path2D" parent="EnemyPaths"]
+position = Vector2(-3895, -954)
+rotation = 0.640536
+curve = SubResource("Curve2D_kgxvy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="EnemyPaths/Path2D4"]
+position = Vector2(100, 6)
+rotation = 0.00483088
+script = ExtResource("6_tbgog")
+
+[node name="Bichito_02" parent="EnemyPaths/Path2D4/PathFollow2D" instance=ExtResource("6_7wrgn")]
+rotation = -0.256563
+
+[node name="Path2D5" type="Path2D" parent="EnemyPaths"]
+position = Vector2(-2764, 422)
+rotation = 0.640536
+curve = SubResource("Curve2D_kgxvy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="EnemyPaths/Path2D5"]
+position = Vector2(100, 6)
+rotation = 0.640536
+rotates = false
+script = ExtResource("6_tbgog")
+
+[node name="Bichito_02" parent="EnemyPaths/Path2D5/PathFollow2D" instance=ExtResource("6_7wrgn")]
+rotation = -0.815069
