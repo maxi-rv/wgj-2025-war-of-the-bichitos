@@ -50,7 +50,6 @@ func handle_animations():
 		area_2d_collision_shape_2d.position.x = -60
 		area_2d_collision_shape_2d.position.y = 32
 	
-
 func _on_area_2d_area_entered(area: Area2D):
 	var areaParent = area.get_parent()
 	if areaParent is Bichito:

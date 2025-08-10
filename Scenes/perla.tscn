@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwri073pa31u"]
+
+[ext_resource type="Script" uid="uid://bl8cvk88m4436" path="res://Scripts/perla.gd" id="1_me4f6"]
+[ext_resource type="Texture2D" uid="uid://degkw0i2meaf7" path="res://Assets/placeholders/icon.svg" id="2_tba2v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cxudt"]
+
+[node name="Perla" type="Area2D"]
+script = ExtResource("1_me4f6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tba2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cxudt")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

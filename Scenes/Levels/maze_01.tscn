@@ -21,7 +21,6 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-919, -511, 930, -515, 916, 510, -921, 513)])
 
 [node name="Maze_01" type="Node2D"]
-modulate = Color(0.0768358, 0.0768358, 0.0768358, 1)
 y_sort_enabled = true
 script = ExtResource("1_y2vf1")
 
