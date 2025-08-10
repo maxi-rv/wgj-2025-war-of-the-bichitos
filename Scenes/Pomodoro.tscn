@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://nimj1708iaep"]
+[gd_scene load_steps=5 format=3 uid="uid://nimj1708iaep"]
 
 [ext_resource type="Script" uid="uid://bciy8npff8hiv" path="res://Scripts/pomodoro.gd" id="1_5onei"]
 [ext_resource type="Texture2D" uid="uid://hg03r7o0aiu3" path="res://Assets/Personajes/pomodoro.png" id="2_mhqt3"]
-[ext_resource type="PackedScene" uid="uid://br0g7308u6rhj" path="res://Scenes/dialog_system.tscn" id="4_byetl"]
 [ext_resource type="Texture2D" uid="uid://dmxs7mguarkbo" path="res://Assets/Objetos/mundo cute - Grupos/Medio.png" id="6_5onei"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_31n2j"]
@@ -37,7 +36,5 @@ offset = Vector2(0, -50)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(0, -117.143)
 polygon = PackedVector2Array(-81.4286, 57.1429, -190, 111.429, -191.429, 212.857, 188.571, 208.571, 185.714, 97.1429, 71.4286, 57.1429)
-
-[node name="Dialog_System" parent="." instance=ExtResource("4_byetl")]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
