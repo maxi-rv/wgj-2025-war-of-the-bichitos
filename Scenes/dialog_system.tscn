@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://br0g7308u6rhj"]
+
+[ext_resource type="Texture2D" uid="uid://dm2t5tgfux1bp" path="res://Assets/Objetos/Panel de Texto.png" id="1_70xce"]
+[ext_resource type="Script" uid="uid://ct8ffnwo04f5" path="res://Scripts/dialog_system.gd" id="1_dr6ha"]
+
+[node name="Dialog_System" type="CanvasLayer"]
+script = ExtResource("1_dr6ha")
+
+[node name="Dialog_Box" type="TextureRect" parent="."]
+z_index = 5
+texture = ExtResource("1_70xce")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialog_Box"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 20.0
+offset_right = 1022.0
+offset_bottom = 236.0
+text = "Texto:
+Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto."
+scroll_active = false

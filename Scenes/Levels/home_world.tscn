@@ -1,33 +1,62 @@
-[gd_scene load_steps=19 format=3 uid="uid://0rk0el4c2bg1"]
+[gd_scene load_steps=29 format=3 uid="uid://0rk0el4c2bg1"]
 
 [ext_resource type="Script" uid="uid://cip14cdhda4wu" path="res://Scripts/home_world.gd" id="1_fngsy"]
 [ext_resource type="Texture2D" uid="uid://pwf7s1jvvvj8" path="res://Assets/Fondo/fondo cute.png" id="2_fesx2"]
 [ext_resource type="AudioStream" uid="uid://1s38o4jcgqlm" path="res://Sound/Bring It Together - Telecasted.mp3" id="3_p0bf3"]
 [ext_resource type="PackedScene" uid="uid://k528gspw45so" path="res://Scenes/player.tscn" id="4_6wdjv"]
 [ext_resource type="PackedScene" uid="uid://nimj1708iaep" path="res://Scenes/Pomodoro.tscn" id="5_ksj1j"]
-[ext_resource type="PackedScene" uid="uid://d3nuvxyyt0bsc" path="res://Scenes/Objetos Cute/Sin Colliders/chupetin_02.tscn" id="6_45akd"]
-[ext_resource type="PackedScene" uid="uid://b6pgkgn1qykbq" path="res://Scenes/Objetos Cute/Sin Colliders/flor_amarilla_clarita_01.tscn" id="7_15msa"]
-[ext_resource type="PackedScene" uid="uid://cjl143ugualqh" path="res://Scenes/Objetos Cute/Sin Colliders/flor_violeta_01.tscn" id="8_2uc4j"]
-[ext_resource type="PackedScene" uid="uid://dv6xqeiwfhhlb" path="res://Scenes/Objetos Cute/Sin Colliders/frutilla_01.tscn" id="9_4g2j3"]
-[ext_resource type="PackedScene" uid="uid://c2maqpp3u2wbn" path="res://Scenes/Objetos Cute/Sin Colliders/chupetin_01.tscn" id="10_3qx5t"]
-[ext_resource type="PackedScene" uid="uid://bxldnvkyy5si1" path="res://Scenes/Objetos Cute/Sin Colliders/flor_amarilla_01.tscn" id="11_llqit"]
-[ext_resource type="PackedScene" uid="uid://durlh6uom057q" path="res://Scenes/Objetos Cute/Sin Colliders/sandia_01.tscn" id="12_rwjgs"]
-[ext_resource type="PackedScene" uid="uid://dc8cdesjixvuv" path="res://Scenes/Objetos Cute/Sin Colliders/caramelo_01.tscn" id="13_furrs"]
-[ext_resource type="PackedScene" uid="uid://d2xijhro83qgr" path="res://Scenes/Objetos Cute/Sin Colliders/flor_amarilla_02.tscn" id="14_ubpol"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_qr0vi"]
-radius = 68.1175
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vlryo"]
-radius = 35.0
-height = 120.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0mbvg"]
-radius = 40.0
-height = 224.0
+[ext_resource type="Texture2D" uid="uid://ch2y2vd5kum6p" path="res://Assets/Objetos/mundo cute - Grupos/Grupo 1 der.png" id="6_6wdjv"]
+[ext_resource type="Texture2D" uid="uid://b383f6s0u37po" path="res://Assets/Objetos/mundo cute - Grupos/Grupo 1 izq.png" id="7_ksj1j"]
+[ext_resource type="Texture2D" uid="uid://dkduvi1mdijm6" path="res://Assets/Objetos/mundo cute - Grupos/Grupo 2 der.png" id="8_45akd"]
+[ext_resource type="Texture2D" uid="uid://bdrg30swbwefq" path="res://Assets/Objetos/mundo cute - Grupos/Grupo 2 izq.png" id="9_15msa"]
+[ext_resource type="Texture2D" uid="uid://dn1ijnedqdk0e" path="res://Assets/Objetos/mundo cute - Grupos/Grupo 3 der.png" id="10_2uc4j"]
+[ext_resource type="Texture2D" uid="uid://hilywysyxb5t" path="res://Assets/Objetos/mundo cute - Grupos/Grupo 3 izq.png" id="11_4g2j3"]
+[ext_resource type="Texture2D" uid="uid://cllf68jmh6hif" path="res://Assets/Objetos/mundo cute - Grupos/Grupo 4 der.png" id="12_3qx5t"]
+[ext_resource type="Texture2D" uid="uid://dwugyq1cmeec1" path="res://Assets/Objetos/mundo cute - Grupos/Grupo 4 izq.png" id="13_llqit"]
+[ext_resource type="Texture2D" uid="uid://dni7ttv4fk6gy" path="res://Assets/Objetos/mundo cute - Grupos/Grupo 5 izq.png" id="14_ksj1j"]
+[ext_resource type="Texture2D" uid="uid://n470fd66kwli" path="res://Assets/Objetos/mundo cute - Grupos/Grupo decoración 1.png" id="14_rwjgs"]
+[ext_resource type="Texture2D" uid="uid://d1miy28b5icxn" path="res://Assets/Objetos/mundo cute - Grupos/Grupo decoración 2.png" id="15_furrs"]
+[ext_resource type="Texture2D" uid="uid://ceaoivtr3vxn8" path="res://Assets/Objetos/mundo cute - Grupos/Grupo decoración 3.png" id="16_ubpol"]
+[ext_resource type="Texture2D" uid="uid://v8oh4y8j2x4u" path="res://Assets/Objetos/mundo cute - Grupos/Grupo decoración 4.png" id="17_obnt3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4vay5"]
 radius = 72.1803
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6wdjv"]
+a = Vector2(-169.225, 0)
+b = Vector2(0, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ksj1j"]
+a = Vector2(-90, 0)
+b = Vector2(120, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_45akd"]
+a = Vector2(-100, 0)
+b = Vector2(80, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_15msa"]
+a = Vector2(-60, 0)
+b = Vector2(60, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2uc4j"]
+a = Vector2(-50, 0)
+b = Vector2(50, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4g2j3"]
+a = Vector2(-100, 0)
+b = Vector2(80, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3qx5t"]
+a = Vector2(-75, 0)
+b = Vector2(80, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_llqit"]
+a = Vector2(-75, 0)
+b = Vector2(150, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rwjgs"]
+a = Vector2(-10, 0)
+b = Vector2(50, 0)
 
 [node name="Home_World" type="Node2D"]
 y_sort_enabled = true
@@ -48,111 +77,129 @@ bus = &"Music"
 position = Vector2(-9, 432)
 
 [node name="Pomodoro" parent="." instance=ExtResource("5_ksj1j")]
-position = Vector2(-59, -57)
-
-[node name="Folliage_01" type="StaticBody2D" parent="."]
-y_sort_enabled = true
-position = Vector2(-227, 62)
-rotation = -0.261799
-
-[node name="Chupetin_02" parent="Folliage_01" instance=ExtResource("6_45akd")]
-
-[node name="Flor_Amarilla_Clarita_01" parent="Folliage_01" instance=ExtResource("7_15msa")]
-position = Vector2(52.5525, 62.7394)
-rotation = -2.87979
-scale = Vector2(0.2, 0.2)
-
-[node name="Flor_Violeta_01" parent="Folliage_01" instance=ExtResource("8_2uc4j")]
-position = Vector2(71.2118, 85.5678)
-rotation = 0.261799
-scale = Vector2(0.1, 0.1)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Folliage_01"]
-position = Vector2(63.1748, 73.0615)
-rotation = 0.261799
-scale = Vector2(0.5, 0.5)
-shape = SubResource("CircleShape2D_qr0vi")
-
-[node name="Folliage_02" type="StaticBody2D" parent="."]
-y_sort_enabled = true
-
-[node name="Frutilla_01" parent="Folliage_02" instance=ExtResource("9_4g2j3")]
-position = Vector2(-484.763, 178)
-scale = Vector2(0.5, 0.5)
-
-[node name="Frutilla_02" parent="Folliage_02" instance=ExtResource("9_4g2j3")]
-position = Vector2(-557.763, 221)
-rotation = -0.349066
-scale = Vector2(0.25, 0.25)
-flip_h = true
-
-[node name="Flor_Violeta_02" parent="Folliage_02" instance=ExtResource("8_2uc4j")]
-position = Vector2(-512.763, 235)
-scale = Vector2(0.2, 0.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Folliage_02"]
-position = Vector2(-503, 214)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_vlryo")
-
-[node name="Folliage_03" type="StaticBody2D" parent="."]
-y_sort_enabled = true
-
-[node name="Chupetin_01" parent="Folliage_03" instance=ExtResource("10_3qx5t")]
-position = Vector2(-798.887, 28.1987)
-rotation = 0.349066
-scale = Vector2(0.5, 0.5)
-
-[node name="Flor_Amarilla_01" parent="Folliage_03" instance=ExtResource("11_llqit")]
-position = Vector2(-814.887, 62.1987)
-scale = Vector2(0.3, 0.3)
-
-[node name="Flor_Amarilla_Clarita_01" parent="Folliage_03" instance=ExtResource("7_15msa")]
-position = Vector2(-749.887, 64.1987)
-rotation = -3.14159
-scale = Vector2(0.2, 0.2)
-
-[node name="Flor_Amarilla_Clarita_02" parent="Folliage_03" instance=ExtResource("7_15msa")]
-position = Vector2(-859.887, 92.1987)
-rotation = -1.48353
-scale = Vector2(0.2, 0.2)
-
-[node name="Flor_Violeta_01" parent="Folliage_03" instance=ExtResource("8_2uc4j")]
-position = Vector2(-797.887, 107.199)
-scale = Vector2(0.2, 0.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Folliage_03"]
-position = Vector2(-798, 70)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_vlryo")
-
-[node name="Folliage_04" type="StaticBody2D" parent="."]
-y_sort_enabled = true
-position = Vector2(-787, 383)
-
-[node name="Sandia_01" parent="Folliage_04" instance=ExtResource("12_rwjgs")]
-position = Vector2(53, -13)
-scale = Vector2(0.5, 0.5)
-flip_h = true
-
-[node name="Caramelo_01" parent="Folliage_04" instance=ExtResource("13_furrs")]
-position = Vector2(109, 70)
-scale = Vector2(0.3, 0.3)
-
-[node name="Flor_Amarilla_02" parent="Folliage_04" instance=ExtResource("14_ubpol")]
-position = Vector2(-21, 67)
-rotation = -0.872665
-scale = Vector2(0.2, 0.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Folliage_04"]
-position = Vector2(53, 18)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_0mbvg")
+position = Vector2(0, -97)
 
 [node name="GoToNextLevel_Area2D" type="Area2D" parent="."]
 position = Vector2(-5, -633)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoToNextLevel_Area2D"]
 shape = SubResource("CircleShape2D_4vay5")
+
+[node name="Grupo1Der" type="StaticBody2D" parent="."]
+position = Vector2(770, -319)
+
+[node name="Grupo1Der" type="Sprite2D" parent="Grupo1Der"]
+y_sort_enabled = true
+texture = ExtResource("6_6wdjv")
+offset = Vector2(0, -30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grupo1Der"]
+shape = SubResource("SegmentShape2D_6wdjv")
+
+[node name="Grupo1Izq" type="StaticBody2D" parent="."]
+position = Vector2(-690, -345)
+
+[node name="Grupo1Izq" type="Sprite2D" parent="Grupo1Izq"]
+y_sort_enabled = true
+texture = ExtResource("7_ksj1j")
+offset = Vector2(0, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grupo1Izq"]
+shape = SubResource("SegmentShape2D_ksj1j")
+
+[node name="Grupo2Der" type="StaticBody2D" parent="."]
+position = Vector2(761, -19)
+
+[node name="Grupo2Der" type="Sprite2D" parent="Grupo2Der"]
+y_sort_enabled = true
+texture = ExtResource("8_45akd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grupo2Der"]
+shape = SubResource("SegmentShape2D_45akd")
+
+[node name="Grupo2Izq" type="StaticBody2D" parent="."]
+position = Vector2(-760, 33)
+
+[node name="Grupo2Izq" type="Sprite2D" parent="Grupo2Izq"]
+y_sort_enabled = true
+texture = ExtResource("9_15msa")
+offset = Vector2(0, -30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grupo2Izq"]
+shape = SubResource("SegmentShape2D_15msa")
+
+[node name="Grupo3Der" type="StaticBody2D" parent="."]
+position = Vector2(738, 271)
+
+[node name="Grupo3Der" type="Sprite2D" parent="Grupo3Der"]
+y_sort_enabled = true
+texture = ExtResource("10_2uc4j")
+offset = Vector2(0, -30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grupo3Der"]
+shape = SubResource("SegmentShape2D_2uc4j")
+
+[node name="Grupo3Izq" type="StaticBody2D" parent="."]
+position = Vector2(-469, 164)
+
+[node name="Grupo3Izq" type="Sprite2D" parent="Grupo3Izq"]
+y_sort_enabled = true
+texture = ExtResource("11_4g2j3")
+offset = Vector2(0, -70)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grupo3Izq"]
+shape = SubResource("SegmentShape2D_4g2j3")
+
+[node name="Grupo4Der" type="StaticBody2D" parent="."]
+position = Vector2(357, 440)
+
+[node name="Grupo4Der" type="Sprite2D" parent="Grupo4Der"]
+y_sort_enabled = true
+texture = ExtResource("12_3qx5t")
+offset = Vector2(0, -60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grupo4Der"]
+shape = SubResource("SegmentShape2D_3qx5t")
+
+[node name="Grupo4Izq" type="StaticBody2D" parent="."]
+position = Vector2(-773, 417)
+
+[node name="Grupo4Izq" type="Sprite2D" parent="Grupo4Izq"]
+y_sort_enabled = true
+texture = ExtResource("13_llqit")
+offset = Vector2(0, -25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grupo4Izq"]
+shape = SubResource("SegmentShape2D_llqit")
+
+[node name="Grupo 5 izq" type="StaticBody2D" parent="."]
+position = Vector2(360, -137)
+
+[node name="Grupo 5 izq" type="Sprite2D" parent="Grupo 5 izq"]
+texture = ExtResource("14_ksj1j")
+offset = Vector2(0, -40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grupo 5 izq"]
+shape = SubResource("SegmentShape2D_rwjgs")
+
+[node name="GrupoDecoración1" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-86, 262)
+texture = ExtResource("14_rwjgs")
+
+[node name="GrupoDecoración2" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-522, -185)
+texture = ExtResource("15_furrs")
+
+[node name="GrupoDecoración3" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(322, -362)
+texture = ExtResource("16_ubpol")
+
+[node name="GrupoDecoración4" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(356, 103)
+texture = ExtResource("17_obnt3")
 
 [connection signal="area_entered" from="GoToNextLevel_Area2D" to="." method="_on_go_to_next_level_area_2d_area_entered"]

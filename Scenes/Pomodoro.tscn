@@ -1,64 +1,43 @@
-[gd_scene load_steps=9 format=3 uid="uid://nimj1708iaep"]
+[gd_scene load_steps=6 format=3 uid="uid://nimj1708iaep"]
 
 [ext_resource type="Script" uid="uid://bciy8npff8hiv" path="res://Scripts/pomodoro.gd" id="1_5onei"]
 [ext_resource type="Texture2D" uid="uid://hg03r7o0aiu3" path="res://Assets/Personajes/pomodoro.png" id="2_mhqt3"]
-[ext_resource type="Texture2D" uid="uid://bdpwsecmmg0ta" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_zzz.tres" id="3_mhqt3"]
-[ext_resource type="Texture2D" uid="uid://csaphfy65nbdq" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_money.tres" id="4_mhqt3"]
-[ext_resource type="Texture2D" uid="uid://b3lxx4w4kewxk" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_quest.tres" id="5_vb1y5"]
-[ext_resource type="Texture2D" uid="uid://ce7166krx5v0f" path="res://Assets/Objetos/mundo cute - individuales/caramelo 1.png" id="6_5onei"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5onei"]
-radius = 70.0
-height = 304.0
+[ext_resource type="PackedScene" uid="uid://br0g7308u6rhj" path="res://Scenes/dialog_system.tscn" id="4_byetl"]
+[ext_resource type="Texture2D" uid="uid://dmxs7mguarkbo" path="res://Assets/Objetos/mundo cute - Grupos/Medio.png" id="6_5onei"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_31n2j"]
 radius = 658.438
 
 [node name="Pomodoro" type="CharacterBody2D"]
 y_sort_enabled = true
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_5onei")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8, 122)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("2_mhqt3")
-offset = Vector2(0, -100)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-12, 226)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_5onei")
+offset = Vector2(0, -300)
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(2.85714, 0)
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_31n2j")
 
-[node name="Dialog_Scared_Sprite2D" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(-28, -250)
-scale = Vector2(3, 3)
-texture = ExtResource("3_mhqt3")
-
-[node name="Dialog_Sad_Sprite2D" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(-28, -250)
-scale = Vector2(3, 3)
-texture = ExtResource("4_mhqt3")
-
-[node name="Dialog_Happy_Sprite2D" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(-28, -250)
-scale = Vector2(3, 3)
-texture = ExtResource("5_vb1y5")
-
-[node name="Caramelo1" type="Sprite2D" parent="."]
+[node name="Platform" type="Sprite2D" parent="."]
 z_index = -1
 y_sort_enabled = true
-position = Vector2(-40, 202)
+position = Vector2(-187.143, -14.2857)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_5onei")
-offset = Vector2(0, 100)
+offset = Vector2(0, -50)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -117.143)
+polygon = PackedVector2Array(-81.4286, 57.1429, -190, 111.429, -191.429, 212.857, 188.571, 208.571, 185.714, 97.1429, 71.4286, 57.1429)
+
+[node name="Dialog_System" parent="." instance=ExtResource("4_byetl")]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
