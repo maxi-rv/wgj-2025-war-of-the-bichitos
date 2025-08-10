@@ -20,6 +20,11 @@ region = Rect2(192, 0, 32, 37)
 y_sort_enabled = true
 script = ExtResource("1_5wisk")
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+radius = 290.0
+debug_enabled = true
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_tvo8h")
 

@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://ccgsetxpn45iq" path="res://Scripts/maze_01.gd" id="1_lfhok"]
 [ext_resource type="Texture2D" uid="uid://dywqr5g84ily4" path="res://Assets/Fondo/oscuro.png" id="1_qu4ft"]
 [ext_resource type="PackedScene" uid="uid://bw7puhn2jgirm" path="res://Scenes/bichito_01.tscn" id="3_qu4ft"]
-[ext_resource type="PackedScene" uid="uid://bri735pi12g0u" path="res://Scenes/bichito_02.tscn" id="5_rv3w7"]
 
 [sub_resource type="Gradient" id="Gradient_cvnsp"]
 offsets = PackedFloat32Array(0, 0.0578512, 1)
@@ -15,6 +14,11 @@ gradient = SubResource("Gradient_cvnsp")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_rv3w7"]
+vertices = PackedVector2Array(906.133, 500.008, -910.977, 502.977, -909.008, -501.023, 919.859, -504.969)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-919, -511, 930, -515, 916, 510, -921, 513)])
 
 [node name="Maze_01" type="Node2D"]
 modulate = Color(0.589096, 0.589096, 0.589096, 1)
@@ -28,7 +32,7 @@ z_index = -1
 texture = ExtResource("1_qu4ft")
 
 [node name="Player" parent="." instance=ExtResource("1_cm7ct")]
-position = Vector2(-645, 268)
+position = Vector2(162, 331)
 
 [node name="Aura_PointLight2D2" type="PointLight2D" parent="Player"]
 scale = Vector2(3, 3)
@@ -36,8 +40,14 @@ shadow_enabled = true
 texture = SubResource("GradientTexture2D_lfhok")
 texture_scale = 10.0
 
-[node name="Bichito_01" parent="." instance=ExtResource("3_qu4ft")]
-position = Vector2(251, -125)
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_rv3w7")
 
-[node name="Bichito_02" parent="." instance=ExtResource("5_rv3w7")]
-position = Vector2(683, 266)
+[node name="Bichito_01" parent="NavigationRegion2D" instance=ExtResource("3_qu4ft")]
+position = Vector2(-660, -294)
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-159, -93)
+vertices = PackedVector2Array(176, 242, 212, 228, 18, -322, -19, -311)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

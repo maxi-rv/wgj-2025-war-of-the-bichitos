@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://di5oyhi0vemlk"]
+
+[ext_resource type="Texture2D" uid="uid://caixfslivc3kx" path="res://Assets/sketches/bichito_02.png" id="1_ptvjr"]
+[ext_resource type="Script" uid="uid://dqr0xpirdl8jv" path="res://Scripts/agent.gd" id="1_xhs4t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_15vgw"]
+radius = 49.0918
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xhs4t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_morgh"]
+
+[node name="Agent" type="CharacterBody2D"]
+script = ExtResource("1_xhs4t")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+radius = 80.0
+debug_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.339506, 0.385965)
+texture = ExtResource("1_ptvjr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_15vgw")
+
+[node name="Detection" type="Area2D" parent="."]
+scale = Vector2(5, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("CircleShape2D_xhs4t")
+debug_color = Color(0.93848, 0.232103, 0.234118, 0.42)
+
+[node name="Hitbox" type="Area2D" parent="."]
+scale = Vector2(3.5, 3.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_morgh")
+
+[connection signal="area_entered" from="Detection" to="." method="_on_detection_area_entered"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
