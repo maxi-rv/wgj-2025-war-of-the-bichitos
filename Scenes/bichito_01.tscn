@@ -1,10 +1,14 @@
 [gd_scene load_steps=9 format=3 uid="uid://bw7puhn2jgirm"]
 
-[ext_resource type="Script" uid="uid://c703b0l1mfkic" path="res://Scripts/bichito_01.gd" id="1_2pl11"]
-[ext_resource type="Texture2D" uid="uid://d33sfmn6efjf2" path="res://Assets/sketches/char01.png" id="2_qjh8p"]
+[ext_resource type="Script" uid="uid://c703b0l1mfkic" path="res://Scripts/bichito.gd" id="1_2pl11"]
+[ext_resource type="Texture2D" uid="uid://d33sfmn6efjf2" path="res://Assets/sketches/bichito_01.png" id="2_qjh8p"]
 [ext_resource type="Texture2D" uid="uid://dn07lhg3pi7tw" path="res://Assets/placeholders/dialog_kenneys_style7.png" id="3_qjh8p"]
 [ext_resource type="Texture2D" uid="uid://coelbs5on1qbw" path="res://Assets/placeholders/Dialog_Atlas/dialog_scared.tres" id="3_qlu3j"]
 [ext_resource type="Texture2D" uid="uid://chmtrex2amou7" path="res://Assets/placeholders/Dialog_Atlas/dialog_sad.tres" id="4_5g6fa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lsbmb"]
+radius = 20.0
+height = 96.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bpw3"]
 radius = 149.402
@@ -13,13 +17,16 @@ radius = 149.402
 atlas = ExtResource("3_qjh8p")
 region = Rect2(192, 0, 32, 37)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lsbmb"]
-radius = 20.0
-height = 96.0
-
 [node name="Bichito_01" type="CharacterBody2D"]
-modulate = Color(0.470076, 0.470076, 0.470076, 1)
+y_sort_enabled = true
 script = ExtResource("1_2pl11")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qjh8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_lsbmb")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -27,27 +34,20 @@ script = ExtResource("1_2pl11")
 rotation = 1.5708
 shape = SubResource("CircleShape2D_1bpw3")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_qjh8p")
-
 [node name="Dialog_Scared_Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -110)
+position = Vector2(0, -90)
 scale = Vector2(2, 2)
 texture = ExtResource("3_qlu3j")
 
 [node name="Dialog_Sad_Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -110)
+position = Vector2(0, -90)
 scale = Vector2(2, 2)
 texture = ExtResource("4_5g6fa")
 
 [node name="Dialog_Happy_Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -110)
+position = Vector2(0, -90)
 scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_8hqr8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_lsbmb")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

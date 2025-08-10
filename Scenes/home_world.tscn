@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://0rk0el4c2bg1"]
+
+[ext_resource type="Texture2D" uid="uid://pwf7s1jvvvj8" path="res://Assets/Fondo/fondo cute.png" id="1_2hnsd"]
+[ext_resource type="AudioStream" uid="uid://1s38o4jcgqlm" path="res://Sound/Bring It Together - Telecasted.mp3" id="2_v0qd2"]
+[ext_resource type="PackedScene" uid="uid://k528gspw45so" path="res://Scenes/player.tscn" id="3_v0qd2"]
+[ext_resource type="PackedScene" uid="uid://nimj1708iaep" path="res://Scenes/para_sito_01.tscn" id="4_btonh"]
+
+[node name="Home_World" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("1_2hnsd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_v0qd2")
+autoplay = true
+bus = &"Music"
+
+[node name="Player" parent="." instance=ExtResource("3_v0qd2")]
+position = Vector2(0, 188)
+
+[node name="Para-sito_01" parent="." instance=ExtResource("4_btonh")]
+position = Vector2(-654, -240)

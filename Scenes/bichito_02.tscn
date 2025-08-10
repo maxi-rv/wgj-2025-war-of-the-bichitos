@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://bri735pi12g0u"]
+
+[ext_resource type="Script" uid="uid://c703b0l1mfkic" path="res://Scripts/bichito.gd" id="1_5wisk"]
+[ext_resource type="Texture2D" uid="uid://caixfslivc3kx" path="res://Assets/sketches/bichito_02.png" id="2_tvo8h"]
+[ext_resource type="Texture2D" uid="uid://coelbs5on1qbw" path="res://Assets/placeholders/Dialog_Atlas/dialog_scared.tres" id="3_3hugu"]
+[ext_resource type="Texture2D" uid="uid://chmtrex2amou7" path="res://Assets/placeholders/Dialog_Atlas/dialog_sad.tres" id="4_whlby"]
+[ext_resource type="Texture2D" uid="uid://dn07lhg3pi7tw" path="res://Assets/placeholders/dialog_kenneys_style7.png" id="5_64epy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5wisk"]
+radius = 75.326
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tvo8h"]
+radius = 269.151
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oibs6"]
+atlas = ExtResource("5_64epy")
+region = Rect2(192, 0, 32, 37)
+
+[node name="Bichito_02" type="CharacterBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_5wisk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tvo8h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5wisk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_tvo8h")
+
+[node name="Dialog_Scared_Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -150)
+scale = Vector2(2, 2)
+texture = ExtResource("3_3hugu")
+
+[node name="Dialog_Sad_Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -150)
+scale = Vector2(2, 2)
+texture = ExtResource("4_whlby")
+
+[node name="Dialog_Happy_Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -150)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_oibs6")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

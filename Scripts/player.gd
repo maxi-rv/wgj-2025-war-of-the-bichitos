@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Player
 
-@onready var sprite_2d = $Sprite2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var area_2d = $Area2D
 @onready var area_2d_collision_shape_2d = $Area2D/CollisionShape2D
@@ -22,8 +22,14 @@ func _physics_process(delta):
 		velocity = character_direction.normalized() * move_speed
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta) * Vector2.ZERO
-	
+	handle_animations()
 	move_and_slide()
+
+func handle_animations():
+	if character_direction.x > 0:
+		animated_sprite_2d.play("right")
+	elif character_direction.x < 0:
+		animated_sprite_2d.play("left")
 
 func _on_area_2d_area_entered(area: Area2D):
 	var areaParent = area.get_parent()
