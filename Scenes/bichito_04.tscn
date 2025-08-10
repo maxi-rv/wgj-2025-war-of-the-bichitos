@@ -1,0 +1,83 @@
+[gd_scene load_steps=10 format=3 uid="uid://cvp5m8fp0dg86"]
+
+[ext_resource type="Script" uid="uid://dfls5ab3vvl3y" path="res://bichito_04.gd" id="1_g5t6r"]
+[ext_resource type="Texture2D" uid="uid://ciryqtxer2qx1" path="res://Assets/Personajes/Bichitos/familia-que haces der 1.png" id="2_1rc6y"]
+[ext_resource type="Texture2D" uid="uid://c26v62vfy1un5" path="res://Assets/Personajes/Bichitos/familia-que haces der 2 .png" id="2_d2fun"]
+[ext_resource type="Texture2D" uid="uid://c4rp0x8bs11sb" path="res://Assets/Personajes/Bichitos/familia-que haces1 .png" id="3_1rc6y"]
+[ext_resource type="Texture2D" uid="uid://cgynms1nis2io" path="res://Assets/Personajes/Bichitos/familia-que haces 2.png" id="4_caka2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o13ff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1rc6y")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d2fun")
+}],
+"loop": true,
+"name": &"left_scared",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1rc6y")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_caka2")
+}],
+"loop": true,
+"name": &"right_scared",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dfcan"]
+radius = 118.0
+height = 360.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hyar4"]
+radius = 945.66
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnsbj"]
+radius = 118.0
+height = 358.0
+
+[node name="Bichito_04" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_g5t6r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o13ff")
+animation = &"right"
+autoplay = "right"
+
+[node name="Area2D_Monitorable" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitorable"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dfcan")
+
+[node name="Area2D_Monitoring" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitoring"]
+rotation = 1.5708
+shape = SubResource("CircleShape2D_hyar4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_lnsbj")
+
+[connection signal="area_entered" from="Area2D_Monitoring" to="." method="_on_area_2d_monitoring_area_entered"]
+[connection signal="area_exited" from="Area2D_Monitoring" to="." method="_on_area_2d_monitoring_area_exited"]

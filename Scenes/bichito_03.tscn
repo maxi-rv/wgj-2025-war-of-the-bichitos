@@ -1,11 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dka6vbuqd6pp2"]
+[gd_scene load_steps=8 format=3 uid="uid://dka6vbuqd6pp2"]
 
 [ext_resource type="Script" uid="uid://c2oy8gpax5ln3" path="res://bichito_03.gd" id="1_x301k"]
 [ext_resource type="Texture2D" uid="uid://bwipy3nt2gre1" path="res://Assets/Personajes/Bichitos/bicho 3 b.png" id="2_jpoe1"]
 [ext_resource type="Texture2D" uid="uid://bx3aecmwmyhxb" path="res://Assets/Personajes/Bichitos/bicho 3 a.png" id="3_ku1mp"]
-[ext_resource type="Texture2D" uid="uid://coelbs5on1qbw" path="res://Assets/placeholders/Dialog_Atlas/dialog_scared.tres" id="4_7tgfs"]
-[ext_resource type="Texture2D" uid="uid://csaphfy65nbdq" path="res://Assets/placeholders/Dialog_Atlas/para_sito_01_money.tres" id="5_k2j6w"]
-[ext_resource type="Texture2D" uid="uid://dn07lhg3pi7tw" path="res://Assets/placeholders/dialog_kenneys_style7.png" id="6_231v6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l06bk"]
 animations = [{
@@ -33,10 +30,6 @@ height = 360.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_uf3gr"]
 radius = 945.66
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tj5ba"]
-atlas = ExtResource("6_231v6")
-region = Rect2(192, 0, 32, 37)
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vdac8"]
 radius = 118.0
 height = 358.0
@@ -62,24 +55,6 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Monitoring"]
 rotation = 1.5708
 shape = SubResource("CircleShape2D_uf3gr")
-
-[node name="Dialog_Scared_Sprite2D" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(0, -225)
-scale = Vector2(2, 2)
-texture = ExtResource("4_7tgfs")
-
-[node name="Dialog_Sad_Sprite2D" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(0, -225)
-scale = Vector2(2, 2)
-texture = ExtResource("5_k2j6w")
-
-[node name="Dialog_Happy_Sprite2D" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(0, -225)
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_tj5ba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
