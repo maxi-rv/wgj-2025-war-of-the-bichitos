@@ -49,10 +49,8 @@ position = Vector2(-59, -57)
 y_sort_enabled = true
 position = Vector2(-227, 62)
 rotation = -0.261799
-scale = Vector2(1, 1)
 
 [node name="Chupetin_02" parent="Folliage_01" instance=ExtResource("5_qr0vi")]
-scale = Vector2(1, 1)
 
 [node name="Flor_Amarilla_Clarita_01" parent="Folliage_01" instance=ExtResource("6_wgrjc")]
 position = Vector2(52.5525, 62.7394)
