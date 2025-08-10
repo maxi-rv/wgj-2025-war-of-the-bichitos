@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y1hes45301ub"
-path="res://.godot/imported/joyita.png-e428bfe748da2db6028cc5aa406c4ac7.ctex"
+uid="uid://cyfhv6708thqi"
+path="res://.godot/imported/perla 4.png-e67709b90e13be651330ad778201b7fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/joyita.png"
-dest_files=["res://.godot/imported/joyita.png-e428bfe748da2db6028cc5aa406c4ac7.ctex"]
+source_file="res://Assets/Objetos/Perlas/perla 4.png"
+dest_files=["res://.godot/imported/perla 4.png-e67709b90e13be651330ad778201b7fc.ctex"]
 
 [params]
 

@@ -150,7 +150,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_0mbvg")
 
 [node name="GoToNextLevel_Area2D" type="Area2D" parent="."]
-position = Vector2(-5, 632)
+position = Vector2(-5, -633)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoToNextLevel_Area2D"]
 shape = SubResource("CircleShape2D_4vay5")

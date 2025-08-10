@@ -21,18 +21,56 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-919, -511, 930, -515, 916, 510, -921, 513)])
 
 [node name="Maze_01" type="Node2D"]
-modulate = Color(0.0962047, 0.0962048, 0.0962047, 1)
+modulate = Color(0.43134, 0.43134, 0.43134, 1)
 y_sort_enabled = true
 script = ExtResource("1_y2vf1")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Background1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1920, -1080)
+texture = ExtResource("2_kgxvy")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -1080)
+texture = ExtResource("2_kgxvy")
+
+[node name="Background3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1920, -1080)
+texture = ExtResource("2_kgxvy")
+
+[node name="Background4" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1920, 0)
+texture = ExtResource("2_kgxvy")
+
+[node name="Background5" type="Sprite2D" parent="."]
 z_index = -1
 texture = ExtResource("2_kgxvy")
 
+[node name="Background6" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1920, 0)
+texture = ExtResource("2_kgxvy")
+
+[node name="Background7" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1920, 1080)
+texture = ExtResource("2_kgxvy")
+
+[node name="Background8" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 1080)
+texture = ExtResource("2_kgxvy")
+
+[node name="Background9" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1920, 1080)
+texture = ExtResource("2_kgxvy")
+
 [node name="Player" parent="." instance=ExtResource("3_7wrgn")]
-position = Vector2(162, 331)
+position = Vector2(0, 1374)
 
 [node name="Aura_PointLight2D2" type="PointLight2D" parent="Player"]
 scale = Vector2(3, 3)
@@ -40,6 +78,13 @@ energy = 6.0
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_lfhok")
 texture_scale = 10.0
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2(4, 4)
+limit_left = -2880
+limit_top = -1620
+limit_right = 2880
+limit_bottom = 1620
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(-2, 0)
